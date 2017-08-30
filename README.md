@@ -1,2 +1,2 @@
 # SoulSeoulSoul
-2017 Seoul App Festival - SoulSeoulSoul
+2017 Seoul App Festival - S Travel
