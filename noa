@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView   xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context="a0x7e1.stravel.MainActivity"
+        android:orientation="vertical">
+
+        <!-- Title Bar -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="#29bb9c">
+
+            <ImageButton
+                android:id="@+id/imgbtn_menu"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="8dp"
+                android:background="@drawable/menu_icon"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_gravity="center"
+                android:text="S-Travel"
+                android:textStyle="normal"
+                android:typeface="sans"
+                android:textColor="#FFFF"
+                android:textSize="9pt" />
+
+        </LinearLayout>
+
+        <!-- Main Document View -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!-- Main Document Bar -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp">
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="322dp"
+                    android:layout_height="20dp"
+                    android:background="#FFFFFF"
+                    android:layout_marginLeft="20dp"
+                    android:text="Best"
+                    android:textColor="#000000"
+                    android:textSize="16sp" />
+
+                <Button
+                    android:layout_gravity="right"
+                    android:id="@+id/textView2"
+                    android:layout_width="70dp"
+                    android:layout_height="20dp"
+                    android:background="#FFFFFF"
+                    android:text="Plus+"
+                    android:textColor="#000000"
+                    android:textSize="14sp" />
+            </LinearLayout>
+            <!-- End -->
+            <!-- Best Document ImageBtn Start -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center">
+                <ImageButton
+                    android:id="@+id/imgbtn_maincontent"
+                    android:layout_width="400dp"
+                    android:layout_height="240dp"
+                    app:srcCompat="@drawable/president_house"
+                    />
+            </LinearLayout>
+            <!-- End -->
+        </LinearLayout>
+        <!-- End -->
+
+        <!-- 중간 게시물 시작 -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center">
+            <!-- 1st Document Start -->
+            <LinearLayout
+                android:layout_width="199dp"
+                android:layout_height="194dp"
+                android:orientation="vertical"
+                android:layout_marginRight="1dp">
+
+                <ImageButton
+                    android:id="@+id/imgbtn_subcontent1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@android:drawable/progress_horizontal" />
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:background="#FFFFFF"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginLeft="4dp"
+                    android:textColor="#000000"
+                    android:text="test1"
+                    android:textSize="20sp"/>
+
+            </LinearLayout>
+            <!-- 1st Document End -->
+
+            <!-- 2nd Document Start -->
+            <LinearLayout
+                android:layout_width="199dp"
+                android:layout_height="194dp"
+                android:orientation="vertical"
+                android:layout_marginLeft="1dp">
+
+                <ImageButton
+                    android:id="@+id/imgbtn_subcontent2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:srcCompat="@android:drawable/progress_horizontal" />
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="match_parent"
+                    android:layout_height="20dp"
+                    android:background="#FFFFFF"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginLeft="4dp"
+                    android:textColor="#000000"
+                    android:text="test2"
+                    android:textSize="20sp"/>
+
+            </LinearLayout>
+            <!-- 2nd Document End -->
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
