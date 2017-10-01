@@ -24,6 +24,7 @@
                 android:layout_height="20dp"
                 android:layout_gravity="center"
                 android:layout_marginLeft="8dp"
+                android:onClick="menu"
                 android:background="@drawable/menu_icon"/>
 
             <TextView
