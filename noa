@@ -1,157 +1,155 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView   xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="#FFFFFF">
+    android:layout_height="match_parent" >
 
-    <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
+    <android.support.v7.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:context="a0x7e1.stravel.MainActivity"
-        android:orientation="vertical">
+        android:layout_marginBottom="16dp"
+        card_view:cardPreventCornerOverlap="false"
+        card_view:cardBackgroundColor="#BDBDBD"
+        card_view:cardUseCompatPadding="true">
 
-        <!-- Title Bar -->
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:background="#29bb9c">
-
-            <ImageButton
-                android:id="@+id/imgbtn_menu"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:layout_gravity="center"
-                android:layout_marginLeft="8dp"
-                android:background="@drawable/menu_icon"/>
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_gravity="center"
-                android:text="S-Travel"
-                android:textStyle="normal"
-                android:typeface="sans"
-                android:textColor="#FFFF"
-                android:textSize="9pt" />
-
-        </LinearLayout>
-
-        <!-- Main Document View -->
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_margin="3dp"
+            android:background="#Ffffff"
             android:orientation="vertical">
-            <!-- Main Document Bar -->
+
             <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="5dp"
-                android:layout_marginBottom="5dp">
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
 
-                <TextView
-                    android:id="@+id/textView"
-                    android:layout_width="322dp"
-                    android:layout_height="20dp"
-                    android:background="#FFFFFF"
-                    android:layout_marginLeft="20dp"
-                    android:text="Best"
-                    android:textColor="#000000"
-                    android:textSize="16sp" />
-
-                <Button
-                    android:layout_gravity="right"
-                    android:id="@+id/textView2"
-                    android:layout_width="70dp"
-                    android:layout_height="20dp"
-                    android:background="#FFFFFF"
-                    android:text="Plus+"
-                    android:textColor="#000000"
-                    android:textSize="14sp" />
-            </LinearLayout>
-            <!-- End -->
-            <!-- Best Document ImageBtn Start -->
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_gravity="center">
-                <ImageButton
-                    android:id="@+id/imgbtn_maincontent"
-                    android:layout_width="400dp"
-                    android:layout_height="240dp"
-                    app:srcCompat="@drawable/president_house"
-                    />
-            </LinearLayout>
-            <!-- End -->
-        </LinearLayout>
-        <!-- End -->
-
-        <!-- 중간 게시물 시작 -->
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_gravity="center">
-            <!-- 1st Document Start -->
-            <LinearLayout
-                android:layout_width="199dp"
-                android:layout_height="194dp"
-                android:orientation="vertical"
-                android:layout_marginRight="1dp">
-
-                <ImageButton
-                    android:id="@+id/imgbtn_subcontent1"
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    app:srcCompat="@android:drawable/progress_horizontal" />
+                    android:layout_marginBottom="1dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="#fff">
 
-                <TextView
-                    android:id="@+id/textView3"
+                    <!--프로필이미지-->
+                    <ImageView
+                        android:id="@+id/imageView"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_centerVertical="true"
+                        android:src="@drawable/coex" />
+
+                    <!--글 정보 출력-->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toLeftOf="@+id/imageView2"
+                        android:layout_toRightOf="@+id/imageView"
+                        android:orientation="vertical">
+
+                        <!--게시글 제목-->
+                        <TextView
+                            android:id="@+id/tv_title"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Janico"
+                            android:textAppearance="?android:attr/textAppearanceMedium"
+                            android:textColor="#000000"
+                            android:textSize="16dp" />
+
+                        <!--시간-->
+                        <TextView
+                            android:id="@+id/tv_date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="2017-10-01 13:59"
+                            android:textAppearance="?android:attr/textAppearanceSmall"
+                            android:textColor="#000000"
+                            android:textSize="13dp" />
+                    </LinearLayout>
+
+                    <!--글 설정-->
+                    <ImageView
+                        android:id="@+id/imageView2"
+                        android:layout_width="15dp"
+                        android:layout_height="18dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="220dp"
+                        android:src="@drawable/arrow" />
+
+                </LinearLayout>
+
+                <!--본문 이미지-->
+                <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="20dp"
-                    android:background="#FFFFFF"
-                    android:layout_marginTop="1dp"
-                    android:layout_marginLeft="4dp"
-                    android:textColor="#000000"
-                    android:text="test1"
-                    android:textSize="20sp"/>
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:background="#ffff"
+                    android:orientation="vertical"
+                    android:weightSum="1">
 
-            </LinearLayout>
-            <!-- 1st Document End -->
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:text="Text" />
 
-            <!-- 2nd Document Start -->
-            <LinearLayout
-                android:layout_width="199dp"
-                android:layout_height="194dp"
-                android:orientation="vertical"
-                android:layout_marginLeft="1dp">
+                    <ImageView
+                        android:id="@+id/iv_image"
+                        android:layout_width="326dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:src="@drawable/koala"
+                        android:layout_weight="4.31" />
+                </LinearLayout>
 
-                <ImageButton
-                    android:id="@+id/imgbtn_subcontent2"
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    app:srcCompat="@android:drawable/progress_horizontal" />
+                    android:orientation="horizontal">
 
-                <TextView
-                    android:id="@+id/textView4"
-                    android:layout_width="match_parent"
-                    android:layout_height="20dp"
-                    android:background="#FFFFFF"
-                    android:layout_marginTop="1dp"
-                    android:layout_marginLeft="4dp"
-                    android:textColor="#000000"
-                    android:text="test2"
-                    android:textSize="20sp"/>
+                    <Button
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="100dp"
+                        android:layout_height="30dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:text="Like"
+                        android:textColor="#000000" />
 
+                    <Button
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="100dp"
+                        android:layout_height="30dp"
+                        android:layout_marginRight="10dp"
+                        android:background="@drawable/border"
+                        android:text="Comment"
+                        android:textColor="#000000" />
+
+                    <Button
+                        android:id="@+id/button"
+                        android:onClick=""
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="100dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/border"
+                        android:text="Shared"
+                        android:textColor="#000000" />
+
+                </LinearLayout>
             </LinearLayout>
-            <!-- 2nd Document End -->
+
         </LinearLayout>
-    </LinearLayout>
-</ScrollView>
+
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>
+<!-- Copyright ⓒ Janico. All Rights Reserved. -->
