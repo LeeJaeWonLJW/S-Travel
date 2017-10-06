@@ -23,6 +23,7 @@
                 android:layout_height="30dp"
                 android:layout_centerVertical="true"
                 android:layout_marginLeft="10dp"
+                android:onClick="menu"
                 android:background="@drawable/menu_icon"/>
 
             <ImageView
