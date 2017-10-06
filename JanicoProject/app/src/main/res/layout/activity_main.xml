@@ -13,32 +13,32 @@
         android:orientation="vertical">
 
         <!--타이틀바-->
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:background="#29bb9c">
 
             <ImageButton
-                android:id="@+id/imgbtn_menu"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:layout_gravity="center"
-                android:layout_marginLeft="8dp"
-                android:onClick="menu"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
                 android:background="@drawable/menu_icon"/>
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_gravity="center"
-                android:text="S-Travel"
-                android:textStyle="normal"
-                android:typeface="sans"
-                android:textColor="#FFFF"
-                android:textSize="9pt" />
+            <ImageView
+                android:layout_width="130dp"
+                android:layout_height="35dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/title"/>
 
-        </LinearLayout>
+            <ImageButton
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/userinfo"/>
+        </RelativeLayout>
 
         <!--청계천, 코엑스, 동대문시장-->
         <LinearLayout

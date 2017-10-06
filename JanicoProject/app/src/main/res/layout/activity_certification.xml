@@ -55,37 +55,80 @@
         <EditText
             android:layout_width="0dp"
             android:layout_height="0dp"
-            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteX="201dp"
             android:textColorHint="#000000"
+            android:textSize="18sp"
             android:hint="Input your name"
             android:id="@+id/nameinput"
             android:textColor="#000000"
-            android:layout_marginTop="46dp"
+            android:layout_marginTop="36dp"
             app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
 
         <!--날짜입력-->
         <EditText
             android:layout_width="0dp"
             android:layout_height="0dp"
-            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteX="201dp"
             android:textColorHint="#000000"
+            android:textSize="18sp"
             android:hint="Input date"
             android:id="@+id/dateinput"
             android:textColor="#000000"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="51dp"
             app:layout_constraintTop_toBottomOf="@+id/nameinput" />
 
         <!--코스입력-->
         <EditText
             android:layout_width="0dp"
             android:layout_height="0dp"
-            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteX="201dp"
             android:textColorHint="#000000"
+            android:textSize="18sp"
             android:hint="Input course"
             android:id="@+id/courseinput"
             android:textColor="#000000"
-            android:layout_marginTop="50dp"
+            android:layout_marginTop="48dp"
             app:layout_constraintTop_toBottomOf="@+id/dateinput" />
+
+        <!--이름-->
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="#000000"
+            android:text="Input your name : "
+            app:layout_constraintRight_toLeftOf="@+id/nameinput"
+            android:layout_marginRight="11dp"
+            android:layout_marginBottom="70dp"
+            app:layout_constraintBottom_toTopOf="@+id/date" />
+
+        <!--날짜-->
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:text="Input date : "
+            app:layout_constraintRight_toLeftOf="@+id/dateinput"
+            android:layout_marginRight="65dp"
+            android:layout_marginBottom="68dp"
+            app:layout_constraintBottom_toTopOf="@+id/course" />
+
+        <!--코스-->
+
+        <TextView
+            android:id="@+id/course"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#000000"
+            android:textSize="20sp"
+            android:text="Input course : "
+            tools:layout_editor_absoluteY="290dp"
+            app:layout_constraintRight_toLeftOf="@+id/courseinput"
+            android:layout_marginRight="45dp" />
 
     </android.support.constraint.ConstraintLayout>
 </ScrollView>
