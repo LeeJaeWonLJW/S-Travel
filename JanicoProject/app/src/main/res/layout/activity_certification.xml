@@ -11,9 +11,11 @@
     <android.support.constraint.ConstraintLayout
         android:id="@+id/constraintLayout2"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="0dp">
+
+        <!--타이틀바-->
 
         <!--입력부분-->
 
@@ -21,54 +23,55 @@
         <EditText
             android:layout_width="0dp"
             android:layout_height="0dp"
-            tools:layout_editor_absoluteX="201dp"
             android:textColorHint="#000000"
             android:textSize="18sp"
             android:hint="Input your name"
             android:id="@+id/nameinput"
             android:textColor="#000000"
-            android:layout_marginTop="59dp"
-            app:layout_constraintTop_toBottomOf="@+id/relativeLayout2" />
+            android:layout_marginBottom="50dp"
+            app:layout_constraintBottom_toTopOf="@+id/dateinput"
+            android:layout_marginRight="16dp"
+            app:layout_constraintRight_toRightOf="parent" />
 
         <!--날짜입력-->
         <EditText
             android:layout_width="0dp"
             android:layout_height="0dp"
-            tools:layout_editor_absoluteX="201dp"
             android:textColorHint="#000000"
             android:textSize="18sp"
             android:hint="Input date"
             android:id="@+id/dateinput"
             android:textColor="#000000"
-            android:layout_marginTop="51dp"
-            app:layout_constraintTop_toBottomOf="@+id/nameinput" />
+            android:layout_marginBottom="53dp"
+            app:layout_constraintBottom_toTopOf="@+id/courseinput"
+            android:layout_marginRight="63dp"
+            app:layout_constraintRight_toRightOf="parent" />
 
         <!--코스입력-->
         <EditText
             android:layout_width="0dp"
             android:layout_height="0dp"
-            tools:layout_editor_absoluteX="201dp"
             android:textColorHint="#000000"
             android:textSize="18sp"
             android:hint="Input course"
             android:id="@+id/courseinput"
             android:textColor="#000000"
-            android:layout_marginTop="48dp"
-            app:layout_constraintTop_toBottomOf="@+id/dateinput" />
+            tools:layout_editor_absoluteY="334dp"
+            android:layout_marginRight="44dp"
+            app:layout_constraintRight_toRightOf="parent" />
 
         <!--이름-->
         <TextView
             android:id="@+id/name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textSize="20sp"
+            android:textSize="20dp"
             android:textColor="#000000"
             android:text="Input your name : "
-            app:layout_constraintRight_toLeftOf="@+id/nameinput"
-            android:layout_marginRight="11dp"
-            android:layout_marginEnd="11dp"
             android:layout_marginBottom="70dp"
-            app:layout_constraintBottom_toTopOf="@+id/date" />
+            app:layout_constraintBottom_toTopOf="@+id/date"
+            android:layout_marginLeft="8dp"
+            app:layout_constraintLeft_toLeftOf="parent" />
 
         <!--날짜-->
         <TextView
@@ -76,13 +79,12 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="#000000"
-            android:textSize="20sp"
+            android:textSize="20dp"
             android:text="Input date : "
-            app:layout_constraintRight_toLeftOf="@+id/dateinput"
-            android:layout_marginRight="65dp"
-            android:layout_marginBottom="67dp"
+            android:layout_marginBottom="68dp"
             app:layout_constraintBottom_toTopOf="@+id/course"
-            android:layout_marginEnd="65dp" />
+            android:layout_marginLeft="8dp"
+            app:layout_constraintLeft_toLeftOf="parent" />
 
         <!--코스-->
         <TextView
@@ -90,21 +92,25 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="#000000"
-            android:textSize="20sp"
+            android:textSize="20dp"
             android:text="Input course : "
-            tools:layout_editor_absoluteY="312dp"
-            app:layout_constraintRight_toLeftOf="@+id/courseinput"
-            android:layout_marginRight="44dp"
-            android:layout_marginEnd="45dp" />
+            tools:layout_editor_absoluteY="341dp"
+            android:layout_marginLeft="8dp"
+            app:layout_constraintLeft_toLeftOf="parent" />
 
-        <!--타이틀바-->
         <RelativeLayout
             android:id="@+id/relativeLayout2"
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="60dp"
+            android:layout_marginTop="0dp"
             android:background="#29bb9c"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintLeft_toLeftOf="parent"
-            tools:layout_editor_absoluteY="0dp">
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_marginBottom="8dp"
+            app:layout_constraintBottom_toTopOf="@+id/nameinput"
+            app:layout_constraintVertical_bias="0.0">
 
             <ImageButton
                 android:layout_width="30dp"
@@ -130,4 +136,5 @@
 
 
     </android.support.constraint.ConstraintLayout>
+
 </ScrollView>
