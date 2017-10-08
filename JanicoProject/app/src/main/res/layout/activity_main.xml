@@ -1,405 +1,413 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#ffffff">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        tools:context="org.androidtown.janicoproject.MainActivity"
-        android:orientation="vertical">
+    <ScrollView android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
-        <!--타이틀바-->
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:background="#29bb9c">
-
-            <ImageButton
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_centerVertical="true"
-                android:layout_marginLeft="10dp"
-                android:onClick="menu"
-                android:background="@drawable/menu_icon"/>
-
-            <ImageView
-                android:layout_width="130dp"
-                android:layout_height="35dp"
-                android:layout_centerInParent="true"
-                android:background="@drawable/title"/>
-
-            <ImageButton
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:layout_alignParentRight="true"
-                android:layout_centerVertical="true"
-                android:layout_marginRight="10dp"
-                android:background="@drawable/userinfo"/>
-        </RelativeLayout>
-
-        <!--청계천, 코엑스, 동대문시장-->
-        <LinearLayout
-            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_gravity="center">
+            tools:context="org.androidtown.janicoproject.MainActivity"
+            android:orientation="vertical"
+            android:paddingTop="60dp">
 
-            <!--청계천-->
+            <!--청계천, 코엑스, 동대문시장-->
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginRight="5dp">
+                android:orientation="horizontal"
+                android:layout_gravity="center">
 
-                <ImageButton
-                    android:id="@+id/cheonggyecheon"
-                    android:layout_width="120dp"
-                    android:layout_height="127dp"
-                    android:scaleType="fitXY"
-                    android:background="@android:color/transparent"
-                    app:srcCompat="@drawable/cheonggyecheon_black" />
-
-                <ImageView
-                    android:id="@+id/cheonggyecheon_text"
+                <!--청계천-->
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/cheonggyecheon_text_black" />
+                    android:orientation="vertical"
+                    android:layout_marginRight="5dp">
+
+                    <ImageButton
+                        android:id="@+id/cheonggyecheon"
+                        android:layout_width="120dp"
+                        android:layout_height="127dp"
+                        android:scaleType="fitXY"
+                        android:background="@android:color/transparent"
+                        app:srcCompat="@drawable/cheonggyecheon_black"/>
+
+                    <ImageView
+                        android:id="@+id/cheonggyecheon_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/cheonggyecheon_text_black" />
+
+                </LinearLayout>
+
+                <!--코엑스-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/coex"
+                        android:layout_width="120dp"
+                        android:layout_height="127dp"
+                        android:scaleType="fitXY"
+                        android:background="@android:color/transparent"
+                        app:srcCompat="@drawable/coex_black" />
+
+                    <ImageView
+                        android:id="@+id/coex_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/coex_text_black" />
+
+                </LinearLayout>
+
+                <!--동대문시장-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="5dp">
+                    <ImageButton
+                        android:id="@+id/dongdaemoon"
+                        android:layout_width="120dp"
+                        android:layout_height="127dp"
+                        android:scaleType="fitXY"
+                        android:background="@android:color/transparent"
+                        app:srcCompat="@drawable/dongdaemoon_black" />
+
+                    <ImageView
+                        android:id="@+id/dongdaemoon_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/dongdaemoon_text_black"
+                        />
+                </LinearLayout>
 
             </LinearLayout>
 
-            <!--코엑스-->
+            <!--광화문, 경복궁, 북촌한옥마을-->
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:orientation="horizontal"
+                android:layout_gravity="center">
 
-                <ImageButton
-                    android:id="@+id/coex"
-                    android:layout_width="120dp"
-                    android:layout_height="127dp"
-                    android:scaleType="fitXY"
-                    android:background="@android:color/transparent"
-                    app:srcCompat="@drawable/coex_black" />
-
-                <ImageView
-                    android:id="@+id/coex_text"
+                <!--광화문-->
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/coex_text_black" />
+                    android:orientation="vertical"
+                    android:layout_marginRight="5dp">
+
+                    <ImageButton
+                        android:id="@+id/gwanghwa"
+                        android:layout_width="120dp"
+                        android:layout_height="127dp"
+                        android:scaleType="fitXY"
+                        android:background="@android:color/transparent"
+                        app:srcCompat="@drawable/gwanghwa_black" />
+
+                    <ImageView
+                        android:id="@+id/gwanghwa_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/gwanghwa_text_black" />
+
+                </LinearLayout>
+
+                <!--경복궁-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/gyeongbok"
+                        android:layout_width="120dp"
+                        android:layout_height="127dp"
+                        android:scaleType="fitXY"
+                        android:background="@android:color/transparent"
+                        app:srcCompat="@drawable/gyeongbok_black" />
+
+                    <ImageView
+                        android:id="@+id/gyeongbok_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/gyeongbok_text_black" />
+
+                </LinearLayout>
+
+                <!--북촌한옥마을-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="5dp">
+                    <ImageButton
+                        android:id="@+id/hanok"
+                        android:layout_width="120dp"
+                        android:layout_height="127dp"
+                        android:scaleType="fitXY"
+                        android:background="@android:color/transparent"
+                        app:srcCompat="@drawable/hanok_black" />
+
+                    <ImageView
+                        android:id="@+id/hanok_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/hanok_text_black"
+                        />
+                </LinearLayout>
 
             </LinearLayout>
 
-            <!--동대문시장-->
+            <!--홍대, 인사동, 이태원-->
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginLeft="5dp">
-                <ImageButton
-                    android:id="@+id/dongdaemoon"
-                    android:layout_width="120dp"
-                    android:layout_height="127dp"
-                    android:scaleType="fitXY"
-                    android:background="@android:color/transparent"
-                    app:srcCompat="@drawable/dongdaemoon_black" />
+                android:orientation="horizontal"
+                android:layout_gravity="center">
 
-                <ImageView
-                    android:id="@+id/dongdaemoon_text"
+                <!--홍대-->
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/dongdaemoon_text_black"
-                    />
-            </LinearLayout>
+                    android:orientation="vertical"
+                    android:layout_marginRight="5dp">
 
-        </LinearLayout>
+                    <ImageButton
+                        android:id="@+id/hongdae"
+                        android:layout_width="120dp"
+                        android:layout_height="127dp"
+                        android:scaleType="fitXY"
+                        android:background="@android:color/transparent"
+                        app:srcCompat="@drawable/hongdae_black" />
 
-        <!--광화문, 경복궁, 북촌한옥마을-->
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_gravity="center">
+                    <ImageView
+                        android:id="@+id/hongdae_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/hongdae_text_black" />
 
-            <!--광화문-->
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginRight="5dp">
+                </LinearLayout>
 
-                <ImageButton
-                    android:id="@+id/gwanghwa"
-                    android:layout_width="120dp"
-                    android:layout_height="127dp"
-                    android:scaleType="fitXY"
-                    android:background="@android:color/transparent"
-                    app:srcCompat="@drawable/gwanghwa_black" />
-
-                <ImageView
-                    android:id="@+id/gwanghwa_text"
+                <!--인사동-->
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/gwanghwa_text_black" />
+                    android:orientation="vertical">
 
-            </LinearLayout>
+                    <ImageButton
+                        android:id="@+id/insadong"
+                        android:layout_width="120dp"
+                        android:layout_height="127dp"
+                        android:scaleType="fitXY"
+                        android:background="@android:color/transparent"
+                        app:srcCompat="@drawable/insadong_black" />
 
-            <!--경복궁-->
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
+                    <ImageView
+                        android:id="@+id/insadong_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/insadong_text_black" />
 
-                <ImageButton
-                    android:id="@+id/gyeongbok"
-                    android:layout_width="120dp"
-                    android:layout_height="127dp"
-                    android:scaleType="fitXY"
-                    android:background="@android:color/transparent"
-                    app:srcCompat="@drawable/gyeongbok_black" />
+                </LinearLayout>
 
-                <ImageView
-                    android:id="@+id/gyeongbok_text"
+                <!--이태원-->
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/gyeongbok_text_black" />
+                    android:orientation="vertical"
+                    android:layout_marginLeft="5dp">
+                    <ImageButton
+                        android:id="@+id/itaewon"
+                        android:layout_width="120dp"
+                        android:layout_height="127dp"
+                        android:scaleType="fitXY"
+                        android:background="@android:color/transparent"
+                        app:srcCompat="@drawable/itaewon_black" />
 
-            </LinearLayout>
-
-            <!--북촌한옥마을-->
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginLeft="5dp">
-                <ImageButton
-                    android:id="@+id/hanok"
-                    android:layout_width="120dp"
-                    android:layout_height="127dp"
-                    android:scaleType="fitXY"
-                    android:background="@android:color/transparent"
-                    app:srcCompat="@drawable/hanok_black" />
-
-                <ImageView
-                    android:id="@+id/hanok_text"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/hanok_text_black"
-                    />
-            </LinearLayout>
-
-        </LinearLayout>
-
-        <!--홍대, 인사동, 이태원-->
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_gravity="center">
-
-            <!--홍대-->
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginRight="5dp">
-
-                <ImageButton
-                    android:id="@+id/hongdae"
-                    android:layout_width="120dp"
-                    android:layout_height="127dp"
-                    android:scaleType="fitXY"
-                    android:background="@android:color/transparent"
-                    app:srcCompat="@drawable/hongdae_black" />
-
-                <ImageView
-                    android:id="@+id/hongdae_text"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/hongdae_text_black" />
+                    <ImageView
+                        android:id="@+id/itaewon_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/itaewon_text_black"
+                        />
+                </LinearLayout>
 
             </LinearLayout>
 
-            <!--인사동-->
+            <!--롯데타워, 낙산공원, 남대문시장-->
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:orientation="horizontal"
+                android:layout_gravity="center">
 
-                <ImageButton
-                    android:id="@+id/insadong"
-                    android:layout_width="120dp"
-                    android:layout_height="127dp"
-                    android:scaleType="fitXY"
-                    android:background="@android:color/transparent"
-                    app:srcCompat="@drawable/insadong_black" />
-
-                <ImageView
-                    android:id="@+id/insadong_text"
+                <!--롯데타워-->
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/insadong_text_black" />
+                    android:orientation="vertical"
+                    android:layout_marginRight="5dp">
+
+                    <ImageButton
+                        android:id="@+id/lottetower"
+                        android:layout_width="120dp"
+                        android:layout_height="127dp"
+                        android:scaleType="fitXY"
+                        android:background="@android:color/transparent"
+                        app:srcCompat="@drawable/lottetower_black" />
+
+                    <ImageView
+                        android:id="@+id/lottetower_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/lottetower_text_black" />
+
+                </LinearLayout>
+
+                <!--낙산공원-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/naksan"
+                        android:layout_width="120dp"
+                        android:layout_height="127dp"
+                        android:scaleType="fitXY"
+                        android:background="@android:color/transparent"
+                        app:srcCompat="@drawable/naksan_black" />
+
+                    <ImageView
+                        android:id="@+id/naksan_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/naksan_text_black" />
+
+                </LinearLayout>
+
+                <!--남대문시장-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginLeft="5dp">
+                    <ImageButton
+                        android:id="@+id/namdaemoon"
+                        android:layout_width="120dp"
+                        android:layout_height="127dp"
+                        android:scaleType="fitXY"
+                        android:background="@android:color/transparent"
+                        app:srcCompat="@drawable/namdaemoon_black" />
+
+                    <ImageView
+                        android:id="@+id/namdaemoon_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/namdaemoon_text_black"
+                        />
+                </LinearLayout>
 
             </LinearLayout>
 
-            <!--이태원-->
+            <!--남산타워, 숭례문-->
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginLeft="5dp">
-                <ImageButton
-                    android:id="@+id/itaewon"
-                    android:layout_width="120dp"
-                    android:layout_height="127dp"
-                    android:scaleType="fitXY"
-                    android:background="@android:color/transparent"
-                    app:srcCompat="@drawable/itaewon_black" />
+                android:orientation="horizontal"
+                android:layout_gravity="center">
 
-                <ImageView
-                    android:id="@+id/itaewon_text"
+                <!--남산타워-->
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/itaewon_text_black"
-                    />
-            </LinearLayout>
+                    android:orientation="vertical"
+                    android:layout_marginRight="5dp">
 
-        </LinearLayout>
+                    <ImageButton
+                        android:id="@+id/namsantower"
+                        android:layout_width="120dp"
+                        android:layout_height="127dp"
+                        android:scaleType="fitXY"
+                        android:background="@android:color/transparent"
+                        app:srcCompat="@drawable/namsantower_black" />
 
-        <!--롯데타워, 낙산공원, 남대문시장-->
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_gravity="center">
+                    <ImageView
+                        android:id="@+id/namsantower_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/namsantower_text_black" />
 
-            <!--롯데타워-->
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginRight="5dp">
+                </LinearLayout>
 
-                <ImageButton
-                    android:id="@+id/lottetower"
-                    android:layout_width="120dp"
-                    android:layout_height="127dp"
-                    android:scaleType="fitXY"
-                    android:background="@android:color/transparent"
-                    app:srcCompat="@drawable/lottetower_black" />
-
-                <ImageView
-                    android:id="@+id/lottetower_text"
+                <!--숭례문-->
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/lottetower_text_black" />
+                    android:orientation="vertical"
+                    android:layout_marginLeft="5dp">
 
-            </LinearLayout>
+                    <ImageButton
+                        android:id="@+id/soongrye"
+                        android:layout_width="120dp"
+                        android:layout_height="127dp"
+                        android:scaleType="fitXY"
+                        android:background="@android:color/transparent"
+                        app:srcCompat="@drawable/soongrye_black" />
 
-            <!--낙산공원-->
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical">
+                    <ImageView
+                        android:id="@+id/soongrye_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:srcCompat="@drawable/soongrye_text_black" />
 
-                <ImageButton
-                    android:id="@+id/naksan"
-                    android:layout_width="120dp"
-                    android:layout_height="127dp"
-                    android:scaleType="fitXY"
-                    android:background="@android:color/transparent"
-                    app:srcCompat="@drawable/naksan_black" />
-
-                <ImageView
-                    android:id="@+id/naksan_text"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/naksan_text_black" />
-
-            </LinearLayout>
-
-            <!--남대문시장-->
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginLeft="5dp">
-                <ImageButton
-                    android:id="@+id/namdaemoon"
-                    android:layout_width="120dp"
-                    android:layout_height="127dp"
-                    android:scaleType="fitXY"
-                    android:background="@android:color/transparent"
-                    app:srcCompat="@drawable/namdaemoon_black" />
-
-                <ImageView
-                    android:id="@+id/namdaemoon_text"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/namdaemoon_text_black"
-                    />
-            </LinearLayout>
-
-        </LinearLayout>
-
-        <!--남산타워, 숭례문-->
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:layout_gravity="center">
-
-            <!--남산타워-->
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginRight="5dp">
-
-                <ImageButton
-                    android:id="@+id/namsantower"
-                    android:layout_width="120dp"
-                    android:layout_height="127dp"
-                    android:scaleType="fitXY"
-                    android:background="@android:color/transparent"
-                    app:srcCompat="@drawable/namsantower_black" />
-
-                <ImageView
-                    android:id="@+id/namsantower_text"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/namsantower_text_black" />
-
-            </LinearLayout>
-
-            <!--숭례문-->
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:layout_marginLeft="5dp">
-
-                <ImageButton
-                    android:id="@+id/soongrye"
-                    android:layout_width="120dp"
-                    android:layout_height="127dp"
-                    android:scaleType="fitXY"
-                    android:background="@android:color/transparent"
-                    app:srcCompat="@drawable/soongrye_black" />
-
-                <ImageView
-                    android:id="@+id/soongrye_text"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    app:srcCompat="@drawable/soongrye_text_black" />
+                </LinearLayout>
 
             </LinearLayout>
 
         </LinearLayout>
 
-    </LinearLayout>
+    </ScrollView>
 
-</ScrollView>
+    <!--타이틀바-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#29bb9c"
+        android:layout_alignParentTop="true">
+
+        <ImageButton
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:onClick="menu"
+            android:background="@drawable/menu_icon"/>
+
+        <ImageView
+            android:layout_width="130dp"
+            android:layout_height="35dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/title"/>
+
+        <ImageButton
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/userinfo"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
