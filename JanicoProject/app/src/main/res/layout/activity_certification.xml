@@ -8,109 +8,22 @@
     android:background="#ffffff"
     android:fillViewport="true">
 
-    <android.support.constraint.ConstraintLayout
-        android:id="@+id/constraintLayout2"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="0dp">
-
-        <!--입력부분-->
-
-        <!--이름입력-->
-        <EditText
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:textColorHint="#000000"
-            android:textSize="18sp"
-            android:hint="Input your name"
-            android:id="@+id/nameinput"
-            android:textColor="#000000"
-            android:layout_marginBottom="50dp"
-            app:layout_constraintBottom_toTopOf="@+id/dateinput"
-            android:layout_marginRight="16dp"
-            app:layout_constraintRight_toRightOf="parent" />
-
-        <!--날짜입력-->
-        <EditText
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:textColorHint="#000000"
-            android:textSize="18sp"
-            android:hint="Input date"
-            android:id="@+id/dateinput"
-            android:textColor="#000000"
-            android:layout_marginBottom="53dp"
-            app:layout_constraintBottom_toTopOf="@+id/courseinput"
-            android:layout_marginRight="63dp"
-            app:layout_constraintRight_toRightOf="parent" />
-
-        <!--코스입력-->
-        <EditText
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:textColorHint="#000000"
-            android:textSize="18sp"
-            android:hint="Input course"
-            android:id="@+id/courseinput"
-            android:textColor="#000000"
-            tools:layout_editor_absoluteY="334dp"
-            android:layout_marginRight="44dp"
-            app:layout_constraintRight_toRightOf="parent" />
-
-        <!--이름-->
-        <TextView
-            android:id="@+id/name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="10dp"
-            android:textSize="20dp"
-            android:textColor="#000000"
-            android:text="Input your name : "
-            android:layout_marginBottom="70dp"
-            app:layout_constraintBottom_toTopOf="@+id/date"
-            android:layout_marginLeft="8dp"
-            app:layout_constraintLeft_toLeftOf="parent" />
-
-        <!--날짜-->
-        <TextView
-            android:id="@+id/date"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="#000000"
-            android:textSize="20dp"
-            android:text="Input date : "
-            android:layout_marginBottom="68dp"
-            app:layout_constraintBottom_toTopOf="@+id/course"
-            android:layout_marginLeft="8dp"
-            app:layout_constraintLeft_toLeftOf="parent" />
-
-        <!--코스-->
-        <TextView
-            android:id="@+id/course"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textColor="#000000"
-            android:textSize="20dp"
-            android:text="Input course : "
-            tools:layout_editor_absoluteY="341dp"
-            android:layout_marginLeft="8dp"
-            app:layout_constraintLeft_toLeftOf="parent" />
+        android:orientation="vertical">
 
         <!--타이틀바-->
         <RelativeLayout
             android:id="@+id/relativeLayout2"
-            android:layout_width="0dp"
+            android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:layout_marginTop="0dp"
+            android:layout_marginBottom="49dp"
             android:background="#29bb9c"
+            app:layout_constraintBottom_toTopOf="@+id/nameinput"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            android:layout_marginBottom="8dp"
-            app:layout_constraintBottom_toTopOf="@+id/nameinput"
-            app:layout_constraintVertical_bias="0.0">
+            app:layout_constraintRight_toRightOf="parent">
 
             <ImageButton
                 android:layout_width="30dp"
@@ -134,7 +47,124 @@
                 android:background="@drawable/userinfo" />
         </RelativeLayout>
 
+        <!--이름-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="10dp">
 
-    </android.support.constraint.ConstraintLayout>
+            <!--이름-->
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="20dp"
+                android:textColor="#000000"
+                android:text="Input your name"
+                android:layout_marginRight="15dp" />
+
+            <!--콜론-->
+            <TextView
+                android:id="@+id/namecolon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:textSize="20dp"
+                android:text=":"/>
+
+            <!--이름입력-->
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColorHint="#7b7a7a"
+                android:textSize="20dp"
+                android:hint="Input your name"
+                android:id="@+id/nameinput"
+                android:layout_marginLeft="13dp"/>
+
+        </LinearLayout>
+
+        <!--날짜-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginBottom="10dp">
+
+            <!--날짜-->
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:textSize="20dp"
+                android:layout_marginRight="15dp"
+                android:text="Input date"/>
+
+            <!--콜론-->
+            <TextView
+                android:id="@+id/datecolon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:textSize="20dp"
+                android:text=":"/>
+
+            <!--날짜입력-->
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColorHint="#7b7a7a"
+                android:textSize="20dp"
+                android:hint="Input date"
+                android:id="@+id/dateinput"
+                android:textColor="#000000"
+                android:layout_marginLeft="13dp"/>
+
+        </LinearLayout>
+
+        <!--코스-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <!--코스-->
+            <TextView
+                android:id="@+id/course"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:textSize="20dp"
+                android:layout_marginRight="15dp"
+                android:text="Input course"/>
+
+            <!--콜론-->
+            <TextView
+                android:id="@+id/coursecolon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:textSize="20dp"
+                android:text=":"/>
+
+            <!--코스입력-->
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColorHint="#7b7a7a"
+                android:textSize="20dp"
+                android:hint="Input course"
+                android:id="@+id/courseinput"
+                android:textColor="#000000"
+                android:layout_marginLeft="13dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
 
 </ScrollView>
