@@ -14,8 +14,12 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <!-- Title Bar -->
+        <!-- Title -->
         <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+            <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="60dp"
             android:background="#29bb9c">
@@ -41,26 +45,30 @@
 
         </LinearLayout>
 
-        <!-- Main Document View -->
+         </LinearLayout>
+
         <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+            <!-- Main Document View -->
+
+            <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-            <!-- Main Document Bar -->
-            <include layout="@layout/activity_cert" />
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/recyclerview"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"/>
+            </LinearLayout>
+
             <!-- End -->
+
         </LinearLayout>
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content">
-                <Button
-                    android:onClick="onClick"
-                    android:id="@+id/activityButton"
-                    android:layout_marginLeft="50dp"
-                    android:layout_width="100dp"
-                    android:layout_height="30dp"
-                    android:text="쓰기"/>
-        </LinearLayout>
-        <!-- End -->
+
+        <!--Floating 메뉴-->
+
     </LinearLayout>
 </ScrollView>

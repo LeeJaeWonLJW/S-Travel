@@ -1,7 +1,7 @@
 package stravel.a1devproject;
 
 
-public class Item {
+public class Recycler_item {
     int image;
     String title;
 
@@ -12,7 +12,7 @@ public class Item {
         return this.title;
     }
 
-    Item(int image, String title) {
+    Recycler_item(int image, String title) {
         this.image = image;
         this.title = title;
     }

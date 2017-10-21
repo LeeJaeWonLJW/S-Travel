@@ -18,10 +18,10 @@ import java.util.List;
 
 public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHolder> {
     Context context;
-    List<Item> items;
+    List<Recycler_item> items;
     int item_layout;
 
-    public RecyclerAdapter(Context context, List<Item> items, int item_layout) {
+    public RecyclerAdapter(Context context, List<Recycler_item> items, int item_layout) {
         this.context = context;
         this.items = items;
         this.item_layout = item_layout;
@@ -36,7 +36,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
     @RequiresApi(api = Build.VERSION_CODES.JELLY_BEAN)
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        final Item item = items.get(position);
+        final Recycler_item item = items.get(position);
         Drawable drawable = ContextCompat.getDrawable(context, item.getImage());
         holder.image.setBackground(drawable);
         holder.title.setText(item.getTitle());
@@ -62,7 +62,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ViewHo
             super(itemView);
             image = (ImageView) itemView.findViewById(R.id.image);
             title = (TextView) itemView.findViewById(R.id.title);
-            // cardview = (CardView) itemView.findViewById(R.id.cardview);
+            cardview = (CardView) itemView.findViewById(R.id.cardview);
         }
     }
 }
