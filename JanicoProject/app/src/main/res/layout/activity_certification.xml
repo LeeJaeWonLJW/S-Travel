@@ -143,12 +143,22 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="20dp">
 
+                <!--확인-->
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:gravity="center"
                     android:text="Confirm"
                     android:id="@+id/confirm"/>
+
+                <!--캡쳐-->
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Capture"
+                    android:visibility="gone"
+                    android:id="@+id/capture"/>
 
             </LinearLayout>
 
@@ -159,7 +169,8 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="30dp"
                 android:background="@drawable/certificate"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:id="@+id/certification">
 
                 <!--이름, 코스-->
                 <LinearLayout
@@ -219,7 +230,6 @@
             </LinearLayout>
 
         </LinearLayout>
-
 
     </ScrollView>
 
