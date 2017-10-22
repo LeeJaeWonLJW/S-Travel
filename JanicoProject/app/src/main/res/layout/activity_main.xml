@@ -391,7 +391,7 @@
             android:layout_height="30dp"
             android:layout_centerVertical="true"
             android:layout_marginLeft="10dp"
-            android:onClick="menu"
+            android:id="@+id/menu"
             android:background="@drawable/menu_icon"/>
 
         <ImageView
@@ -406,6 +406,7 @@
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:layout_marginRight="10dp"
+            android:id="@+id/rightmenu"
             android:background="@drawable/userinfo"/>
 
     </RelativeLayout>

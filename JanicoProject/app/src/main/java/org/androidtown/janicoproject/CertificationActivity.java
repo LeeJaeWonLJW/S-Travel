@@ -39,6 +39,7 @@ public class CertificationActivity extends AppCompatActivity {
         datedate = (TextView) findViewById(R.id.datedate);
         capture = (Button) findViewById(R.id.capture);
 
+        //confirm버튼 누를 시 반영되는 부분
         findViewById(R.id.confirm).setOnClickListener(
                 new Button.OnClickListener() {
                     public void onClick(View v) {
@@ -53,7 +54,7 @@ public class CertificationActivity extends AppCompatActivity {
                 });
 
 
-        //사진 캡쳐 후 저장 알아서 구현해라 난 모른다
+        //사진 캡쳐 후 저장 알아서 구현해라 난 모른다ㅜㅜ
         //id가 certification인 리니어 레이아웃을 캡쳐 한 후 저장하면된다
         findViewById(R.id.capture).setOnClickListener(
                 new Button.OnClickListener() {
