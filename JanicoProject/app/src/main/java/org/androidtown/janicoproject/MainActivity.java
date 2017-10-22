@@ -25,6 +25,7 @@ public class MainActivity extends AppCompatActivity{
         cheonggyecheon_text=(ImageView) findViewById(R.id.cheonggyecheon_text);
     }
 
+    //menu button
     public void menu(View view) {
         Intent intent = new Intent(this, CertificationActivity.class);
         startActivity(intent);
