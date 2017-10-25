@@ -36,7 +36,7 @@
                         android:layout_height="127dp"
                         android:scaleType="fitXY"
                         android:background="@android:color/transparent"
-                        app:srcCompat="@drawable/cheonggyecheon_black"/>
+                        app:srcCompat="@drawable/cheonggyecheon_black" />
 
                     <ImageView
                         android:id="@+id/cheonggyecheon_text"
@@ -363,7 +363,7 @@
                         android:layout_height="127dp"
                         android:scaleType="fitXY"
                         android:background="@android:color/transparent"
-                        app:srcCompat="@drawable/soongrye_black" />
+                        app:srcCompat="@drawable/soongrye_black"/>
 
                     <ImageView
                         android:id="@+id/soongrye_text"

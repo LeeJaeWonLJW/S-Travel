@@ -83,6 +83,21 @@ public class MainActivity extends AppCompatActivity{
         soongrye_text = (ImageView) findViewById(R.id.soongrye_text);
 
 
+        cheonggyecheon.setEnabled(false);
+        coex.setEnabled(false);
+        dongdaemoon.setEnabled(false);
+        gwanghwa.setEnabled(false);
+        gyeongbok.setEnabled(false);
+        hanok.setEnabled(false);
+        hongdae.setEnabled(false);
+        insadong.setEnabled(false);
+        itaewon.setEnabled(false);
+        lottetower.setEnabled(false);
+        naksan.setEnabled(false);
+        namdaemoon.setEnabled(false);
+        namsantower.setEnabled(false);
+        soongrye.setEnabled(false);
+
         //다른 액티비티로 전환 (인증서 액티비티)
         findViewById(R.id.menu).setOnClickListener(
                 new ImageButton.OnClickListener() {
@@ -102,6 +117,7 @@ public class MainActivity extends AppCompatActivity{
                         if (a == 1) {
                             cheonggyecheon.setImageResource(R.drawable.cheonggyecheon);
                             cheonggyecheon_text.setImageResource(R.drawable.cheonggyecheon_text);
+                            cheonggyecheon.setEnabled(true);
                         } else if (a == 2) {
                             coex.setImageResource(R.drawable.coex);
                             coex_text.setImageResource(R.drawable.coex_text);
@@ -142,6 +158,15 @@ public class MainActivity extends AppCompatActivity{
                             soongrye.setImageResource(R.drawable.soongrye);
                             soongrye_text.setImageResource(R.drawable.soongrye_text);
                         }
+                    }
+                }
+        );
+
+        cheonggyecheon.setOnClickListener(
+                new ImageButton.OnClickListener(){
+                    public void onClick(View v){
+                        Intent intent = new Intent(MainActivity.this, CertificationActivity.class);
+                        startActivity(intent);
                     }
                 }
         );
