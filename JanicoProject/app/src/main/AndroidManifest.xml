@@ -19,7 +19,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".CertificationActivity"
-            >
+            android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar"
+            android:screenOrientation="portrait">
         </activity>
         <activity android:name=".SettingActivity">
         </activity>

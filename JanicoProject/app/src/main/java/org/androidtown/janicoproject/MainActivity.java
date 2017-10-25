@@ -1,15 +1,13 @@
 package org.androidtown.janicoproject;
 
-        import android.app.Activity;
         import android.content.Intent;
+        import android.content.SharedPreferences;
+        import android.preference.PreferenceManager;
         import android.support.v7.app.AppCompatActivity;
         import android.os.Bundle;
         import android.view.View;
-        import android.view.View.OnClickListener;
-        import android.widget.Button;
         import android.widget.ImageButton;
         import android.widget.ImageView;
-        import android.widget.TextView;
 
     /*
     광화문		gwanghwa
@@ -98,65 +96,125 @@ public class MainActivity extends AppCompatActivity{
         namsantower.setEnabled(false);
         soongrye.setEnabled(false);
 
-        //다른 액티비티로 전환 (인증서 액티비티)
-        findViewById(R.id.menu).setOnClickListener(
-                new ImageButton.OnClickListener() {
-                    public void onClick(View v) {
-                        Intent intent = new Intent(MainActivity.this, CertificationActivity.class);
-                        startActivity(intent);
-                    }
-                }
-        );
-
         //지금은 타이틀바 제일 오른쪽 사람모양 클릭하면 a가 하나씩 증가하면서
         //하나씩 색칠되게 해놨다 알아서 바꿔랑
         findViewById(R.id.rightmenu).setOnClickListener(
                 new ImageButton.OnClickListener() {
                     public void onClick(View v) {
                         a++;
+
                         if (a == 1) {
                             cheonggyecheon.setImageResource(R.drawable.cheonggyecheon);
                             cheonggyecheon_text.setImageResource(R.drawable.cheonggyecheon_text);
                             cheonggyecheon.setEnabled(true);
+                            SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(MainActivity.this);
+                            SharedPreferences.Editor editor = prefs.edit();
+                            editor.putInt("course", a);
+                            editor.commit();
                         } else if (a == 2) {
                             coex.setImageResource(R.drawable.coex);
                             coex_text.setImageResource(R.drawable.coex_text);
+                            coex.setEnabled(true);
+                            SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(MainActivity.this);
+                            SharedPreferences.Editor editor = prefs.edit();
+                            editor.putInt("course", a);
+                            editor.commit();
                         } else if (a == 3) {
                             dongdaemoon.setImageResource(R.drawable.dongdaemoon);
                             dongdaemoon_text.setImageResource(R.drawable.dongdaemoon_text);
+                            dongdaemoon.setEnabled(true);
+                            SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(MainActivity.this);
+                            SharedPreferences.Editor editor = prefs.edit();
+                            editor.putInt("course", a);
+                            editor.commit();
                         } else if (a == 4) {
                             gwanghwa.setImageResource(R.drawable.gwanghwa);
                             gwanghwa_text.setImageResource(R.drawable.gwanghwa_text);
+                            gwanghwa.setEnabled(true);
+                            SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(MainActivity.this);
+                            SharedPreferences.Editor editor = prefs.edit();
+                            editor.putInt("course", a);
+                            editor.commit();
                         } else if (a == 5) {
                             gyeongbok.setImageResource(R.drawable.gyeongbok);
                             gyeongbok_text.setImageResource(R.drawable.gyeongbok_text);
+                            gyeongbok.setEnabled(true);
+                            SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(MainActivity.this);
+                            SharedPreferences.Editor editor = prefs.edit();
+                            editor.putInt("course", a);
+                            editor.commit();
                         } else if (a == 6) {
                             hanok.setImageResource(R.drawable.hanok);
                             hanok_text.setImageResource(R.drawable.hanok_text);
+                            hanok.setEnabled(true);
+                            SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(MainActivity.this);
+                            SharedPreferences.Editor editor = prefs.edit();
+                            editor.putInt("course", a);
+                            editor.commit();
                         } else if (a == 7) {
                             hongdae.setImageResource(R.drawable.hongdae);
                             hongdae_text.setImageResource(R.drawable.hongdae_text);
+                            hongdae.setEnabled(true);
+                            SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(MainActivity.this);
+                            SharedPreferences.Editor editor = prefs.edit();
+                            editor.putInt("course", a);
+                            editor.commit();
                         } else if (a == 8) {
                             insadong.setImageResource(R.drawable.insadong);
                             insadong_text.setImageResource(R.drawable.insadong_text);
+                            insadong.setEnabled(true);
+                            SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(MainActivity.this);
+                            SharedPreferences.Editor editor = prefs.edit();
+                            editor.putInt("course", a);
+                            editor.commit();
                         } else if (a == 9) {
                             itaewon.setImageResource(R.drawable.itaewon);
                             itaewon_text.setImageResource(R.drawable.itaewon_text);
+                            itaewon.setEnabled(true);
+                            SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(MainActivity.this);
+                            SharedPreferences.Editor editor = prefs.edit();
+                            editor.putInt("course", a);
+                            editor.commit();
                         } else if (a == 10) {
                             lottetower.setImageResource(R.drawable.lottetower);
                             lottetower_text.setImageResource(R.drawable.lottetower_text);
+                            lottetower.setEnabled(true);
+                            SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(MainActivity.this);
+                            SharedPreferences.Editor editor = prefs.edit();
+                            editor.putInt("course", a);
+                            editor.commit();
                         } else if (a == 11) {
                             naksan.setImageResource(R.drawable.naksan);
                             naksan_text.setImageResource(R.drawable.naksan_text);
+                            naksan.setEnabled(true);
+                            SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(MainActivity.this);
+                            SharedPreferences.Editor editor = prefs.edit();
+                            editor.putInt("course", a);
+                            editor.commit();
                         } else if (a == 12) {
                             namdaemoon.setImageResource(R.drawable.namdaemoon);
                             namdaemoon_text.setImageResource(R.drawable.namdaemoon_text);
+                            namdaemoon.setEnabled(true);
+                            SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(MainActivity.this);
+                            SharedPreferences.Editor editor = prefs.edit();
+                            editor.putInt("course", a);
+                            editor.commit();
                         } else if (a == 13) {
                             namsantower.setImageResource(R.drawable.namsantower);
                             namsantower_text.setImageResource(R.drawable.namsantower_text);
+                            namsantower.setEnabled(true);
+                            SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(MainActivity.this);
+                            SharedPreferences.Editor editor = prefs.edit();
+                            editor.putInt("course", a);
+                            editor.commit();
                         } else if (a == 14) {
                             soongrye.setImageResource(R.drawable.soongrye);
                             soongrye_text.setImageResource(R.drawable.soongrye_text);
+                            soongrye.setEnabled(true);
+                            SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(MainActivity.this);
+                            SharedPreferences.Editor editor = prefs.edit();
+                            editor.putInt("course", a);
+                            editor.commit();
                         }
                     }
                 }
