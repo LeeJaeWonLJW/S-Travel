@@ -56,6 +56,7 @@ public class MainActivity extends AppCompatActivity{
         final int[] coursetextimage={R.drawable.cheonggyecheon_text, R.drawable.coex_text, R.drawable.dongdaemoon_text, R.drawable.gwanghwa_text, R.drawable.gyeongbok_text, R.drawable.hanok_text,
                 R.drawable.hongdae_text, R.drawable.insadong_text, R.drawable.itaewon_text, R.drawable.lottetower_text, R.drawable.naksan_text, R.drawable.namdaemoon_text, R.drawable.namsantower_text, R.drawable.soongrye_text};
 
+        //아이디별로 버튼 지정
         for(int i=0;i<14;i++){
             this.course[i]=(ImageButton) findViewById(courseid[i]);
             this.coursetext[i]=(ImageView) findViewById(coursetextid[i]);
@@ -78,8 +79,7 @@ public class MainActivity extends AppCompatActivity{
                     }
                 }
         );
-
-
+        //버튼 구현
         for(int i=0;i<14;i++) {
             course[i].setOnClickListener(
                     new ImageButton.OnClickListener() {

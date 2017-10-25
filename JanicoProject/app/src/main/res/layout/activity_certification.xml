@@ -1,21 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="400dp"
-    android:layout_height="300dp"
-    android:background="#ffffff">
+    android:layout_height="400dp"
+    android:layout_gravity="center"
+    android:background="@android:color/transparent">
+
+    <ImageButton
+        android:id="@+id/closebutton"
+        android:layout_width="wrap_content"
+        android:scaleType="fitCenter"
+        android:background="@android:color/transparent"
+        android:layout_height="30dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="350dp"
+        app:srcCompat="@drawable/closebutton" />
 
     <LinearLayout
         android:id="@+id/certification"
-        android:layout_width="370dp"
-        android:layout_height="280dp"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
         android:layout_gravity="center"
         android:background="@drawable/certification"
         android:orientation="vertical"
         android:layout_centerVertical="true"
-        android:layout_alignParentEnd="true"
-        android:layout_marginEnd="13dp">
+        android:layout_alignParentTop="false">
 
         <!--이름, 코스-->
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -27,7 +39,7 @@
                 android:id="@+id/courseimage"
                 android:layout_width="170dp"
                 android:layout_height="170dp"
-                android:layout_marginLeft="30dp"
+                android:layout_marginLeft="40dp"
                 android:layout_marginTop="68dp"
                 android:src="@drawable/cheonggyecheon"/>
 
@@ -41,7 +53,8 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:layout_marginTop="105dp">
 
                     <!--이름-->
                     <TextView
@@ -50,7 +63,7 @@
                         android:text="이름   :"
                         android:textSize="14dp"
                         android:textColor="#000000"
-                        android:layout_marginTop="105dp"/>
+                        android:layout_marginLeft="15dp"/>
 
                     <!--이름변수-->
                     <TextView
@@ -60,7 +73,6 @@
                         android:id="@+id/namename"
                         android:textSize="14dp"
                         android:textColor="#000000"
-                        android:layout_marginTop="105dp"
                         android:layout_marginLeft="12dp"/>
 
                 </LinearLayout>
@@ -69,7 +81,8 @@
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:layout_marginTop="20dp">
 
                     <!--코스-->
                     <TextView
@@ -78,7 +91,7 @@
                         android:text="코스   :"
                         android:textSize="14dp"
                         android:textColor="#000000"
-                        android:layout_marginTop="14dp"/>
+                        android:layout_marginLeft="15dp"/>
 
                     <!--코스 변수-->
                     <TextView
@@ -88,7 +101,6 @@
                         android:text="남산한옥마을"
                         android:textSize="14dp"
                         android:textColor="#000000"
-                        android:layout_marginTop="14dp"
                         android:layout_marginLeft="12dp"/>
 
                 </LinearLayout>
@@ -98,5 +110,7 @@
         </LinearLayout>
 
     </LinearLayout>
+
+
 
 </RelativeLayout>
