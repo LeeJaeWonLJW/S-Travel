@@ -28,8 +28,8 @@ package org.androidtown.janicoproject;
 
 public class MainActivity extends AppCompatActivity{
 
-    ImageButton cheonggyecheon, coex, dongdaemoon, gwanghwa, gyeongbok, hanok, hongdae, insadong, itaewon, lottetower, naksan, namdaemoon, namsantower, soongrye;
-    ImageView cheonggyecheon_text, coex_text, dongdaemoon_text, gwanghwa_text, gyeongbok_text, hanok_text, hongdae_text, insadong_text, itaewon_text, lottetower_text, naksan_text, namdaemoon_text, namsantower_text, soongrye_text;
+    private ImageButton[] course = null;
+    private ImageView[] coursetext=null;
 
     int a=0;
 
@@ -38,195 +38,57 @@ public class MainActivity extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        cheonggyecheon = (ImageButton) findViewById(R.id.cheonggyecheon);
-        cheonggyecheon_text = (ImageView) findViewById(R.id.cheonggyecheon_text);
+        course = new ImageButton[14];
+        coursetext = new ImageView[14];
 
-        coex = (ImageButton) findViewById(R.id.coex);
-        coex_text = (ImageView) findViewById(R.id.coex_text);
+        //코스 아이디배열
+        int[] courseid={R.id.cheonggyecheon, R.id.coex, R.id.dongdaemoon, R.id.gwanghwa, R.id.gyeongbok, R.id.hanok, R.id.hongdae, R.id.insadong, R.id.itaewon, R.id.lottetower, R.id.naksan, R.id.namdaemoon, R.id.namsantower, R.id.soongrye};
 
-        dongdaemoon = (ImageButton) findViewById(R.id.dongdaemoon);
-        dongdaemoon_text = (ImageView) findViewById(R.id.dongdaemoon_text);
+        //코스 텍스트아이디배열
+        int[] coursetextid={R.id.cheonggyecheon_text, R.id.coex_text, R.id.dongdaemoon_text, R.id.gwanghwa_text, R.id.gyeongbok_text, R.id.hanok_text, R.id.hongdae_text,
+                R.id.insadong_text, R.id.itaewon_text, R.id.lottetower_text, R.id.naksan_text, R.id.namdaemoon_text, R.id.namsantower_text, R.id.soongrye_text};
 
-        gwanghwa = (ImageButton) findViewById(R.id.gwanghwa);
-        gwanghwa_text = (ImageView) findViewById(R.id.gwanghwa_text);
+        //코스 이미지배열
+        final int[] courseimage={R.drawable.cheonggyecheon, R.drawable.coex, R.drawable.dongdaemoon, R.drawable.gwanghwa, R.drawable.gyeongbok, R.drawable.hanok,
+                R.drawable.hongdae, R.drawable.insadong, R.drawable.itaewon, R.drawable.lottetower, R.drawable.naksan, R.drawable.namdaemoon, R.drawable.namsantower, R.drawable.soongrye};
 
-        gyeongbok = (ImageButton) findViewById(R.id.gyeongbok);
-        gyeongbok_text = (ImageView) findViewById(R.id.gyeongbok_text);
+        //코스 텍스트이미지배열
+        final int[] coursetextimage={R.drawable.cheonggyecheon_text, R.drawable.coex_text, R.drawable.dongdaemoon_text, R.drawable.gwanghwa_text, R.drawable.gyeongbok_text, R.drawable.hanok_text,
+                R.drawable.hongdae_text, R.drawable.insadong_text, R.drawable.itaewon_text, R.drawable.lottetower_text, R.drawable.naksan_text, R.drawable.namdaemoon_text, R.drawable.namsantower_text, R.drawable.soongrye_text};
 
-        hanok = (ImageButton) findViewById(R.id.hanok);
-        hanok_text = (ImageView) findViewById(R.id.hanok_text);
-
-        hongdae = (ImageButton) findViewById(R.id.hongdae);
-        hongdae_text = (ImageView) findViewById(R.id.hongdae_text);
-
-        insadong = (ImageButton) findViewById(R.id.insadong);
-        insadong_text = (ImageView) findViewById(R.id.insadong_text);
-
-        itaewon = (ImageButton) findViewById(R.id.itaewon);
-        itaewon_text = (ImageView) findViewById(R.id.itaewon_text);
-
-        lottetower = (ImageButton) findViewById(R.id.lottetower);
-        lottetower_text = (ImageView) findViewById(R.id.lottetower_text);
-
-        naksan = (ImageButton) findViewById(R.id.naksan);
-        naksan_text = (ImageView) findViewById(R.id.naksan_text);
-
-        namdaemoon = (ImageButton) findViewById(R.id.namdaemoon);
-        namdaemoon_text = (ImageView) findViewById(R.id.namdaemoon_text);
-
-        namsantower = (ImageButton) findViewById(R.id.namsantower);
-        namsantower_text = (ImageView) findViewById(R.id.namsantower_text);
-
-        soongrye = (ImageButton) findViewById(R.id.soongrye);
-        soongrye_text = (ImageView) findViewById(R.id.soongrye_text);
-
-
-        cheonggyecheon.setEnabled(false);
-        coex.setEnabled(false);
-        dongdaemoon.setEnabled(false);
-        gwanghwa.setEnabled(false);
-        gyeongbok.setEnabled(false);
-        hanok.setEnabled(false);
-        hongdae.setEnabled(false);
-        insadong.setEnabled(false);
-        itaewon.setEnabled(false);
-        lottetower.setEnabled(false);
-        naksan.setEnabled(false);
-        namdaemoon.setEnabled(false);
-        namsantower.setEnabled(false);
-        soongrye.setEnabled(false);
+        for(int i=0;i<14;i++){
+            this.course[i]=(ImageButton) findViewById(courseid[i]);
+            this.coursetext[i]=(ImageView) findViewById(coursetextid[i]);
+            this.course[i].setEnabled(false);
+        }
 
         //지금은 타이틀바 제일 오른쪽 사람모양 클릭하면 a가 하나씩 증가하면서
         //하나씩 색칠되게 해놨다 알아서 바꿔랑
         findViewById(R.id.rightmenu).setOnClickListener(
                 new ImageButton.OnClickListener() {
                     public void onClick(View v) {
+                        course[a].setImageResource(courseimage[a]);
+                        coursetext[a].setImageResource(coursetextimage[a]);
+                        course[a].setEnabled(true);
+                        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(MainActivity.this);
+                        SharedPreferences.Editor editor = prefs.edit();
+                        editor.putInt("course", a);
+                        editor.commit();
                         a++;
+                    }
+                }
+        );
 
-                        if (a == 1) {
-                            cheonggyecheon.setImageResource(R.drawable.cheonggyecheon);
-                            cheonggyecheon_text.setImageResource(R.drawable.cheonggyecheon_text);
-                            cheonggyecheon.setEnabled(true);
-                            SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(MainActivity.this);
-                            SharedPreferences.Editor editor = prefs.edit();
-                            editor.putInt("course", a);
-                            editor.commit();
-                        } else if (a == 2) {
-                            coex.setImageResource(R.drawable.coex);
-                            coex_text.setImageResource(R.drawable.coex_text);
-                            coex.setEnabled(true);
-                            SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(MainActivity.this);
-                            SharedPreferences.Editor editor = prefs.edit();
-                            editor.putInt("course", a);
-                            editor.commit();
-                        } else if (a == 3) {
-                            dongdaemoon.setImageResource(R.drawable.dongdaemoon);
-                            dongdaemoon_text.setImageResource(R.drawable.dongdaemoon_text);
-                            dongdaemoon.setEnabled(true);
-                            SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(MainActivity.this);
-                            SharedPreferences.Editor editor = prefs.edit();
-                            editor.putInt("course", a);
-                            editor.commit();
-                        } else if (a == 4) {
-                            gwanghwa.setImageResource(R.drawable.gwanghwa);
-                            gwanghwa_text.setImageResource(R.drawable.gwanghwa_text);
-                            gwanghwa.setEnabled(true);
-                            SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(MainActivity.this);
-                            SharedPreferences.Editor editor = prefs.edit();
-                            editor.putInt("course", a);
-                            editor.commit();
-                        } else if (a == 5) {
-                            gyeongbok.setImageResource(R.drawable.gyeongbok);
-                            gyeongbok_text.setImageResource(R.drawable.gyeongbok_text);
-                            gyeongbok.setEnabled(true);
-                            SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(MainActivity.this);
-                            SharedPreferences.Editor editor = prefs.edit();
-                            editor.putInt("course", a);
-                            editor.commit();
-                        } else if (a == 6) {
-                            hanok.setImageResource(R.drawable.hanok);
-                            hanok_text.setImageResource(R.drawable.hanok_text);
-                            hanok.setEnabled(true);
-                            SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(MainActivity.this);
-                            SharedPreferences.Editor editor = prefs.edit();
-                            editor.putInt("course", a);
-                            editor.commit();
-                        } else if (a == 7) {
-                            hongdae.setImageResource(R.drawable.hongdae);
-                            hongdae_text.setImageResource(R.drawable.hongdae_text);
-                            hongdae.setEnabled(true);
-                            SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(MainActivity.this);
-                            SharedPreferences.Editor editor = prefs.edit();
-                            editor.putInt("course", a);
-                            editor.commit();
-                        } else if (a == 8) {
-                            insadong.setImageResource(R.drawable.insadong);
-                            insadong_text.setImageResource(R.drawable.insadong_text);
-                            insadong.setEnabled(true);
-                            SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(MainActivity.this);
-                            SharedPreferences.Editor editor = prefs.edit();
-                            editor.putInt("course", a);
-                            editor.commit();
-                        } else if (a == 9) {
-                            itaewon.setImageResource(R.drawable.itaewon);
-                            itaewon_text.setImageResource(R.drawable.itaewon_text);
-                            itaewon.setEnabled(true);
-                            SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(MainActivity.this);
-                            SharedPreferences.Editor editor = prefs.edit();
-                            editor.putInt("course", a);
-                            editor.commit();
-                        } else if (a == 10) {
-                            lottetower.setImageResource(R.drawable.lottetower);
-                            lottetower_text.setImageResource(R.drawable.lottetower_text);
-                            lottetower.setEnabled(true);
-                            SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(MainActivity.this);
-                            SharedPreferences.Editor editor = prefs.edit();
-                            editor.putInt("course", a);
-                            editor.commit();
-                        } else if (a == 11) {
-                            naksan.setImageResource(R.drawable.naksan);
-                            naksan_text.setImageResource(R.drawable.naksan_text);
-                            naksan.setEnabled(true);
-                            SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(MainActivity.this);
-                            SharedPreferences.Editor editor = prefs.edit();
-                            editor.putInt("course", a);
-                            editor.commit();
-                        } else if (a == 12) {
-                            namdaemoon.setImageResource(R.drawable.namdaemoon);
-                            namdaemoon_text.setImageResource(R.drawable.namdaemoon_text);
-                            namdaemoon.setEnabled(true);
-                            SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(MainActivity.this);
-                            SharedPreferences.Editor editor = prefs.edit();
-                            editor.putInt("course", a);
-                            editor.commit();
-                        } else if (a == 13) {
-                            namsantower.setImageResource(R.drawable.namsantower);
-                            namsantower_text.setImageResource(R.drawable.namsantower_text);
-                            namsantower.setEnabled(true);
-                            SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(MainActivity.this);
-                            SharedPreferences.Editor editor = prefs.edit();
-                            editor.putInt("course", a);
-                            editor.commit();
-                        } else if (a == 14) {
-                            soongrye.setImageResource(R.drawable.soongrye);
-                            soongrye_text.setImageResource(R.drawable.soongrye_text);
-                            soongrye.setEnabled(true);
-                            SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(MainActivity.this);
-                            SharedPreferences.Editor editor = prefs.edit();
-                            editor.putInt("course", a);
-                            editor.commit();
+
+        for(int i=0;i<14;i++) {
+            course[i].setOnClickListener(
+                    new ImageButton.OnClickListener() {
+                        public void onClick(View v) {
+                            Intent intent = new Intent(MainActivity.this, CertificationActivity.class);
+                            startActivity(intent);
                         }
                     }
-                }
-        );
-
-        cheonggyecheon.setOnClickListener(
-                new ImageButton.OnClickListener(){
-                    public void onClick(View v){
-                        Intent intent = new Intent(MainActivity.this, CertificationActivity.class);
-                        startActivity(intent);
-                    }
-                }
-        );
+            );
+        }
     }
 }
