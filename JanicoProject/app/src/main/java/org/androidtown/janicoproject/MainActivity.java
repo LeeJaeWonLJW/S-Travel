@@ -8,6 +8,7 @@ package org.androidtown.janicoproject;
         import android.view.View;
         import android.widget.ImageButton;
         import android.widget.ImageView;
+        import android.widget.TextView;
 
     /*
     광화문		gwanghwa
@@ -31,12 +32,15 @@ public class MainActivity extends AppCompatActivity{
     private ImageButton[] course = null;
     private ImageView[] coursetext=null;
 
-    int a=0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        final DBHelper dbHelper = new DBHelper(getApplicationContext(), "Stamp.db", null, 1);
+
+
 
         course = new ImageButton[14];
         coursetext = new ImageView[14];
