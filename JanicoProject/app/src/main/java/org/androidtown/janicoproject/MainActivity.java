@@ -63,28 +63,22 @@ public class MainActivity extends AppCompatActivity{
             this.course[i].setEnabled(false);
         }
 
-        //지금은 타이틀바 제일 오른쪽 사람모양 클릭하면 a가 하나씩 증가하면서
-        //하나씩 색칠되게 해놨다 알아서 바꿔랑
-        findViewById(R.id.rightmenu).setOnClickListener(
-                new ImageButton.OnClickListener() {
-                    public void onClick(View v) {
-                        course[a].setImageResource(courseimage[a]);
-                        coursetext[a].setImageResource(coursetextimage[a]);
-                        course[a].setEnabled(true);
-                        SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(MainActivity.this);
-                        SharedPreferences.Editor editor = prefs.edit();
-                        editor.putInt("course", a);
-                        editor.commit();
-                        a++;
-                    }
-                }
-        );
+
+        //팝업창에서 값 받아와서 버튼 활성화하기
+        Intent intent=getIntent();
+        int a=intent.getIntExtra("course", 0);
+        course[a].setImageResource(courseimage[a]);
+        coursetext[a].setImageResource(coursetextimage[a]);
+        course[a].setEnabled(true);
+
         //버튼 구현
         for(int i=0;i<14;i++) {
+            final int b=i;
             course[i].setOnClickListener(
                     new ImageButton.OnClickListener() {
                         public void onClick(View v) {
                             Intent intent = new Intent(MainActivity.this, CertificationActivity.class);
+                            intent.putExtra("course", b);
                             startActivity(intent);
                         }
                     }

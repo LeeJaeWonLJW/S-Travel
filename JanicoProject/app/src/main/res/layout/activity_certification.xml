@@ -1,30 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="400dp"
-    android:layout_height="400dp"
-    android:layout_gravity="center"
-    android:background="@android:color/transparent">
 
-    <ImageButton
-        android:id="@+id/closebutton"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <!--축하메세지-->
+    <TextView
         android:layout_width="wrap_content"
-        android:scaleType="fitCenter"
-        android:background="@android:color/transparent"
-        android:layout_height="30dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginLeft="350dp"
-        app:srcCompat="@drawable/closebutton" />
+        android:layout_height="wrap_content"
+        android:text="도장 획득!"
+        android:textColor="#000000"
+        android:textSize="40dp"/>
+
 
     <LinearLayout
         android:id="@+id/certification"
-        android:layout_width="match_parent"
+        android:layout_width="400dp"
         android:layout_height="300dp"
         android:layout_gravity="center"
         android:background="@drawable/certification"
         android:orientation="vertical"
         android:layout_centerVertical="true"
         android:layout_alignParentTop="false">
+
+        <!--닫기버튼-->
 
         <!--이름, 코스-->
 
@@ -47,14 +49,14 @@
             <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                android:layout_marginTop="105dp">
 
                 <!--이름-->
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
-                    android:layout_marginTop="105dp">
+                    android:orientation="horizontal">
 
                     <!--이름-->
                     <TextView
@@ -111,6 +113,4 @@
 
     </LinearLayout>
 
-
-
-</RelativeLayout>
+</LinearLayout>

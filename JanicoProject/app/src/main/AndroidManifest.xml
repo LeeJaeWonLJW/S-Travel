@@ -12,16 +12,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
         <activity android:name=".MainActivity">
+        </activity>
+        <activity android:name=".CertificationActivity"
+            android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar">
+        </activity>
+        <activity android:name=".SettingActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
-        </activity>
-        <activity android:name=".CertificationActivity"
-            android:theme="@android:style/Theme.DeviceDefault.Dialog.NoActionBar">
-        </activity>
-        <activity android:name=".SettingActivity">
         </activity>
 
     </application>
