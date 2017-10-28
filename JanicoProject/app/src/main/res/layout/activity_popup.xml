@@ -7,15 +7,6 @@
     android:orientation="vertical"
     android:gravity="center">
 
-    <!--축하메세지-->
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="도장 획득!"
-        android:textColor="#000000"
-        android:textSize="40dp"/>
-
-
     <LinearLayout
         android:id="@+id/certification"
         android:layout_width="400dp"
@@ -111,11 +102,12 @@
 
     </LinearLayout>
 
+    <!--닫기 버튼-->
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/confirm"
-        android:text="확인"
+        android:id="@+id/close"
+        android:text="닫기"
         android:layout_gravity="center" />
 
 </LinearLayout>

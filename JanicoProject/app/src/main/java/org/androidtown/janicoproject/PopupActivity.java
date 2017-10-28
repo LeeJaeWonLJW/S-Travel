@@ -2,7 +2,6 @@ package org.androidtown.janicoproject;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -11,17 +10,11 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 
-public class CertificationActivity extends Activity{
+public class PopupActivity extends Activity{
 
     TextView namename, coursecourse;
     ImageView image;
-    Button confirm;
-
-    //데이터베이스부분
-    int version=1;
-    DBHelper dbhelper;
-    SQLiteDatabase database;
-    //데이터베이스부분
+    Button close;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,13 +23,8 @@ public class CertificationActivity extends Activity{
 
         namename = (TextView) findViewById(R.id.namename);
         coursecourse = (TextView) findViewById(R.id.coursecourse);
-        confirm=(Button) findViewById(R.id.confirm);
+        close=(Button) findViewById(R.id.close);
         image = (ImageView) findViewById(R.id.courseimage);
-
-        //데이터베이스부분
-        dbhelper = new DBHelper(CertificationActivity.this, DBHelper.tableName, null, version);
-        database= dbhelper.getWritableDatabase();
-        //데이터베이스부분
 
         //코스 이미지 배열
         int[] courseimage={R.drawable.cheonggyecheon, R.drawable.coex, R.drawable.dongdaemoon, R.drawable.gwanghwa, R.drawable.gyeongbok, R.drawable.hanok,
@@ -53,15 +41,10 @@ public class CertificationActivity extends Activity{
         coursecourse.setText(coursename[coursenum]);
         final int coursenumnum=coursenum;
 
-
         //닫기버튼
-       confirm.setOnClickListener(
+       close.setOnClickListener(
                 new ImageButton.OnClickListener() {
                     public void onClick(View v) {
-                        Intent intent = new Intent(CertificationActivity.this, MainActivity.class);
-                        intent.putExtra("course", coursenumnum);
-                        startActivity(intent);
-                        dbhelper.updateStatus(database, coursenumnum);
                         finish();
                     }
                 }
