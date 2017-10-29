@@ -10,6 +10,9 @@ package org.androidtown.janicoproject;
         import android.widget.ImageButton;
         import android.widget.ImageView;
         import android.widget.TextView;
+        import android.widget.Toast;
+
+        import static android.widget.Toast.makeText;
 
     /*
     광화문		gwanghwa
@@ -38,6 +41,7 @@ public class MainActivity extends AppCompatActivity{
     DBHelper dbhelper;
     SQLiteDatabase database;
     int status=0;
+    int j;
     //데이터베이스부분
 
     @Override
@@ -53,21 +57,14 @@ public class MainActivity extends AppCompatActivity{
         database= dbhelper.getWritableDatabase();
         //데이터베이스부분
 
-
         //코스 아이디배열
         int[] courseid={R.id.cheonggyecheon, R.id.coex, R.id.dongdaemoon, R.id.gwanghwa, R.id.gyeongbok, R.id.hanok, R.id.hongdae, R.id.insadong, R.id.itaewon, R.id.lottetower, R.id.naksan, R.id.namdaemoon, R.id.namsantower, R.id.soongrye};
-
-
         //코스 텍스트아이디배열
         int[] coursetextid={R.id.cheonggyecheon_text, R.id.coex_text, R.id.dongdaemoon_text, R.id.gwanghwa_text, R.id.gyeongbok_text, R.id.hanok_text, R.id.hongdae_text,
                 R.id.insadong_text, R.id.itaewon_text, R.id.lottetower_text, R.id.naksan_text, R.id.namdaemoon_text, R.id.namsantower_text, R.id.soongrye_text};
-
-
         //코스 이미지배열
         final int[] courseimage={R.drawable.cheonggyecheon, R.drawable.coex, R.drawable.dongdaemoon, R.drawable.gwanghwa, R.drawable.gyeongbok, R.drawable.hanok,
                 R.drawable.hongdae, R.drawable.insadong, R.drawable.itaewon, R.drawable.lottetower, R.drawable.naksan, R.drawable.namdaemoon, R.drawable.namsantower, R.drawable.soongrye};
-
-
         //코스 텍스트이미지배열
         final int[] coursetextimage={R.drawable.cheonggyecheon_text, R.drawable.coex_text, R.drawable.dongdaemoon_text, R.drawable.gwanghwa_text, R.drawable.gyeongbok_text, R.drawable.hanok_text,
                 R.drawable.hongdae_text, R.drawable.insadong_text, R.drawable.itaewon_text, R.drawable.lottetower_text, R.drawable.naksan_text, R.drawable.namdaemoon_text, R.drawable.namsantower_text, R.drawable.soongrye_text};
@@ -91,7 +88,21 @@ public class MainActivity extends AppCompatActivity{
             else continue;
         }
 
-        //버튼 구현
+        //시즌완료 메세지
+        for(int i=0;i<14;i++){
+            status = dbhelper.getStatus(i);
+            if(status==1) {
+                j++;
+                if(j==14){Toast.makeText(this, "축하합니다 시즌 완료!", Toast.LENGTH_LONG).show();}
+                continue;
+            }
+            else {
+                j=0;
+                break;
+            }
+        }
+
+        //버튼 구현 (MainActivity 에서 PopupActivity로 값 보내면서 띄우기)
         for(int i=0;i<14;i++) {
             final int b=i;
             course[i].setOnClickListener(

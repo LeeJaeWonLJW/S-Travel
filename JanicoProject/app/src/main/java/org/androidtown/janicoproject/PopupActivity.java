@@ -20,6 +20,8 @@ public class PopupActivity extends Activity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_popup);
+        this.setFinishOnTouchOutside(false);
+
 
         namename = (TextView) findViewById(R.id.namename);
         coursecourse = (TextView) findViewById(R.id.coursecourse);
@@ -32,7 +34,7 @@ public class PopupActivity extends Activity{
         //코스 한글이름
         String[] coursename={"청계천", "코엑스", "동대문시장", "광화문", "경복궁", "북촌한옥마을", "홍대", "인사동", "이태원", "롯데타워", "낙산공원", "남대문시장", "남산타워", "숭례문"};
 
-        //이미지변수 받아오기
+        //MainActivity intent에서 이미지변수 받아오기
         Intent intent = getIntent();
         int coursenum=intent.getIntExtra("course", 0);
 

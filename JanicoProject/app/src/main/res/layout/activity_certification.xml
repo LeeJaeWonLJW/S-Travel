@@ -1,33 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
-    android:layout_height="400dp"
-    android:background="#ffffff"
-    android:orientation="vertical"
-    android:gravity="center">
-
-    <!--축하메세지-->
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="도장 획득!"
-        android:textColor="#000000"
-        android:textSize="40dp"/>
-
-
     <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
         android:id="@+id/certification"
         android:layout_width="400dp"
         android:layout_height="300dp"
         android:layout_gravity="center"
-        android:background="@drawable/certification"
+        android:background="@drawable/acquire"
         android:orientation="vertical"
         android:layout_centerVertical="true"
         android:layout_alignParentTop="false">
 
         <!--이름, 코스-->
-
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -48,7 +31,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:layout_marginTop="105dp">
+                android:layout_marginTop="120dp">
 
                 <!--이름-->
                 <LinearLayout
@@ -109,13 +92,17 @@
 
         </LinearLayout>
 
-    </LinearLayout>
-
     <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="100dp"
+        android:layout_height="35dp"
         android:id="@+id/confirm"
-        android:text="확인"
-        android:layout_gravity="center" />
+        android:textColor="#ffffff"
+        android:layout_marginTop="-10dp"
+        android:text="도장받기"
+        android:textStyle="bold"
+        android:background="#49c8bd"
+        android:layout_gravity="center"/>
 
 </LinearLayout>
+
+

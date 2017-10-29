@@ -11,34 +11,27 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
+
         <activity android:name=".MainActivity">
         </activity>
+
         <activity android:name=".CertificationActivity"
-            android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar">
-            <intent-filter>
-
-                <action android:name="org.neulboworld.airmouse.intentfilter.speedpopup" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-
-            </intent-filter>
+            android:theme="@style/DialogFullScreen">
         </activity>
+
         <activity android:name=".SettingActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+
         <activity android:name=".PopupActivity"
-            android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar">
-            <intent-filter>
+            android:theme="@style/DialogFullScreen">
+        </activity>
 
-                <action android:name="org.neulboworld.airmouse.intentfilter.speedpopup" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-
-            </intent-filter>
+        <activity android:name=".CompleteActivity"
+            android:theme="@style/DialogFullScreen">
         </activity>
     </application>
 </manifest>

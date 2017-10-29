@@ -46,7 +46,7 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="조건 2!"
+            android:text="조건전체만족"
             android:layout_gravity="center"
             android:id="@+id/button2"/>
         <Button

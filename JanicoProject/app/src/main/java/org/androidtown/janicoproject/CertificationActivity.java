@@ -27,6 +27,8 @@ public class CertificationActivity extends Activity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_certification);
+        this.setFinishOnTouchOutside(false);
+
 
         namename = (TextView) findViewById(R.id.namename);
         coursecourse = (TextView) findViewById(R.id.coursecourse);
@@ -44,7 +46,7 @@ public class CertificationActivity extends Activity{
         //코스 한글이름
         String[] coursename={"청계천", "코엑스", "동대문시장", "광화문", "경복궁", "북촌한옥마을", "홍대", "인사동", "이태원", "롯데타워", "낙산공원", "남대문시장", "남산타워", "숭례문"};
 
-        //이미지변수 받아오기
+        //SettingActivity 에서 Intent로 이미지변수 받아오기
         Intent intent = getIntent();
         int coursenum=intent.getIntExtra("course", 0);
 
@@ -53,7 +55,7 @@ public class CertificationActivity extends Activity{
         coursecourse.setText(coursename[coursenum]);
         final int coursenumnum=coursenum;
 
-        //닫기버튼
+        //도장확인버튼 누르면 db로 정보 업데이트
        confirm.setOnClickListener(
                 new ImageButton.OnClickListener() {
                     public void onClick(View v) {

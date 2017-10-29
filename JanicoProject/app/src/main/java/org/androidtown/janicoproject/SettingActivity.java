@@ -44,6 +44,7 @@ public class SettingActivity extends AppCompatActivity {
                     public void onClick(View v) {
                         Intent intent = new Intent(SettingActivity.this, CertificationActivity.class);
                         intent.putExtra("course", 0);
+                        result.setText(dbhelper.getResult());
                         startActivity(intent);
                     }
                 }
@@ -51,9 +52,8 @@ public class SettingActivity extends AppCompatActivity {
         button2.setOnClickListener(
                 new Button.OnClickListener() {
                     public void onClick(View v) {
-                        Intent intent = new Intent(SettingActivity.this, CertificationActivity.class);
-                        intent.putExtra("course", 1);
-                        startActivity(intent);
+                        for(int i=0;i<14;i++){dbhelper.updateStatus(database, i);}
+                        result.setText(dbhelper.getResult());
                     }
                 }
         );
@@ -61,6 +61,7 @@ public class SettingActivity extends AppCompatActivity {
                 new Button.OnClickListener() {
                     public void onClick(View v) {
                         dbhelper.deleteStatus(database);
+                        result.setText(dbhelper.getResult());
                     }
                 }
         );
