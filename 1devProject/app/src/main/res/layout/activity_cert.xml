@@ -145,16 +145,6 @@
                         android:text="Comment"
                         android:textColor="#000000" />
 
-                    <Button
-                        android:id="@+id/button"
-                        style="@style/Widget.AppCompat.Button.Borderless"
-                        android:layout_width="100dp"
-                        android:layout_height="30dp"
-                        android:background="@drawable/border"
-                        android:onClick=""
-                        android:text="Shared"
-                        android:textColor="#000000" />
-
                 </LinearLayout>
 
             </LinearLayout>
