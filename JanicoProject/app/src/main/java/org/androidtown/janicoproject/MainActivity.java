@@ -93,7 +93,11 @@ public class MainActivity extends AppCompatActivity{
             status = dbhelper.getStatus(i);
             if(status==1) {
                 j++;
-                if(j==14){Toast.makeText(this, "축하합니다 시즌 완료!", Toast.LENGTH_LONG).show();}
+                if(j==14){
+                    Intent intent = new Intent(MainActivity.this, CompleteActivity.class);
+                    startActivity(intent);
+                    break;
+                }
                 continue;
             }
             else {
