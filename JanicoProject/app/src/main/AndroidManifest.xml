@@ -15,6 +15,13 @@
         </activity>
         <activity android:name=".CertificationActivity"
             android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar">
+            <intent-filter>
+
+                <action android:name="org.neulboworld.airmouse.intentfilter.speedpopup" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+            </intent-filter>
         </activity>
         <activity android:name=".SettingActivity">
             <intent-filter>
@@ -25,6 +32,13 @@
         </activity>
         <activity android:name=".PopupActivity"
             android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar">
+            <intent-filter>
+
+                <action android:name="org.neulboworld.airmouse.intentfilter.speedpopup" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+
+            </intent-filter>
         </activity>
     </application>
 </manifest>

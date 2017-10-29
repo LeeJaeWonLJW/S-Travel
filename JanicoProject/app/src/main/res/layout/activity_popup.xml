@@ -109,5 +109,4 @@
         android:id="@+id/close"
         android:text="닫기"
         android:layout_gravity="center" />
-
 </LinearLayout>

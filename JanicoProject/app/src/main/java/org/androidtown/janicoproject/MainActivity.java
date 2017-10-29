@@ -2,6 +2,7 @@ package org.androidtown.janicoproject;
 
         import android.content.Intent;
         import android.content.SharedPreferences;
+        import android.database.sqlite.SQLiteDatabase;
         import android.preference.PreferenceManager;
         import android.support.v7.app.AppCompatActivity;
         import android.os.Bundle;
@@ -32,6 +33,12 @@ public class MainActivity extends AppCompatActivity{
     private ImageButton[] course = null;
     private ImageView[] coursetext=null;
 
+    //데이터베이스부분
+    int version=1;
+    DBHelper dbhelper;
+    SQLiteDatabase database;
+    int status=0;
+    //데이터베이스부분
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -40,6 +47,11 @@ public class MainActivity extends AppCompatActivity{
 
         course = new ImageButton[14];
         coursetext = new ImageView[14];
+
+        //데이터베이스부분
+        dbhelper = new DBHelper(MainActivity.this, DBHelper.tableName, null, version);
+        database= dbhelper.getWritableDatabase();
+        //데이터베이스부분
 
 
         //코스 아이디배열
@@ -68,13 +80,16 @@ public class MainActivity extends AppCompatActivity{
             this.course[i].setEnabled(false);
         }
 
-
-        //팝업창에서 값 받아와서 버튼 활성화하기
-        Intent intent=getIntent();
-        int a=intent.getIntExtra("course", 0);
-        course[a].setImageResource(courseimage[a]);
-        coursetext[a].setImageResource(coursetextimage[a]);
-        course[a].setEnabled(true);
+        //db에서 값 받아와서 버튼 활성화하기
+        for(int i=0;i<14;i++){
+            status = dbhelper.getStatus(i);
+            if(status==1) {
+                course[i].setImageResource(courseimage[i]);
+                coursetext[i].setImageResource(coursetextimage[i]);
+                course[i].setEnabled(true);
+            }
+            else continue;
+        }
 
         //버튼 구현
         for(int i=0;i<14;i++) {

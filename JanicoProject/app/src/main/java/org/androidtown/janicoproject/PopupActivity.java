@@ -19,7 +19,7 @@ public class PopupActivity extends Activity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_certification);
+        setContentView(R.layout.activity_popup);
 
         namename = (TextView) findViewById(R.id.namename);
         coursecourse = (TextView) findViewById(R.id.coursecourse);
@@ -39,7 +39,6 @@ public class PopupActivity extends Activity{
         //이미지 바꾸기
         image.setImageResource(courseimage[coursenum]);
         coursecourse.setText(coursename[coursenum]);
-        final int coursenumnum=coursenum;
 
         //닫기버튼
        close.setOnClickListener(

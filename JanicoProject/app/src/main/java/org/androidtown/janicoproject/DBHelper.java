@@ -109,4 +109,18 @@ public class DBHelper extends SQLiteOpenHelper {
         }
         return result;
     }
+
+    //STATUS 보내주기
+    public int getStatus(int num) {
+
+        SQLiteDatabase db = getReadableDatabase();
+        int a=0;
+
+        // 값을 읽어옴
+        Cursor c = db.rawQuery("SELECT * FROM " + tableName + " where num = " + num, null);
+        while (c.moveToNext()) {
+            a = c.getInt(1);
+        }
+        return a;
+    }
 }

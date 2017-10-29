@@ -53,13 +53,11 @@ public class CertificationActivity extends Activity{
         coursecourse.setText(coursename[coursenum]);
         final int coursenumnum=coursenum;
 
-
         //닫기버튼
        confirm.setOnClickListener(
                 new ImageButton.OnClickListener() {
                     public void onClick(View v) {
                         Intent intent = new Intent(CertificationActivity.this, MainActivity.class);
-                        intent.putExtra("course", coursenumnum);
                         startActivity(intent);
                         dbhelper.updateStatus(database, coursenumnum);
                         finish();
