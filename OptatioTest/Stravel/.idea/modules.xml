@@ -3,7 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Stravel.iml" filepath="$PROJECT_DIR$/Stravel.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://C:\Users\User\Desktop\1devProject\S-Travel\OptatioTest\Stravel\Stravel.iml" filepath="C:\Users\User\Desktop\1devProject\S-Travel\OptatioTest\Stravel\Stravel.iml" />
+      <module fileurl="file://C:\Users\User\Desktop\1devProject\S-Travel\OptatioTest\Stravel\app\app.iml" filepath="C:\Users\User\Desktop\1devProject\S-Travel\OptatioTest\Stravel\app\app.iml" />
     </modules>
   </component>
 </project>

@@ -1,38 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:padding="10dp">
 
-    <!-- Title Bar -->
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:background="#29bb9c">
-
-        <ImageButton
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="10dp"
-            android:background="@drawable/menu_icon"/>
-
-        <ImageView
-            android:layout_width="130dp"
-            android:layout_height="35dp"
-            android:layout_centerInParent="true"
-            android:background="@drawable/title"/>
-
-        <ImageButton
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:layout_marginRight="10dp"
-            android:background="@drawable/userinfo"/>
-    </RelativeLayout>
-
-    <!-- USER DATA -->
     <TextView
         android:visibility="invisible"
         android:id="@+id/uploadID"
@@ -44,7 +17,7 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:layout_margin="3dp"
         android:background="#Ffffff"
         android:orientation="vertical">
@@ -57,8 +30,9 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginBottom="1dp"
+                android:layout_marginBottom="10dp"
                 android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
                 android:background="#fff">
 
                 <!--프로필이미지-->
@@ -111,42 +85,73 @@
 
             </LinearLayout>
 
+            <!--본문 이미지-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="#ffff"
+                android:orientation="vertical"
+                android:weightSum="1">
+
+                <TextView
+                    android:id="@+id/uploadContent"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:text="Text" />
+
+                <ImageView
+                    android:id="@+id/uploadIMG"
+                    android:layout_width="326dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_weight="4.31"
+                    android:src="@drawable/koala" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal">
+
+                <Button
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="100dp"
+                    android:layout_height="30dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/border"
+                    android:text="Like"
+                    android:textColor="#000000" />
+
+                <Button
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="100dp"
+                    android:layout_height="30dp"
+                    android:layout_marginRight="10dp"
+                    android:background="@drawable/border"
+                    android:text="Comment"
+                    android:textColor="#000000" />
+
+                <Button
+                    android:id="@+id/button"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="100dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/border"
+                    android:text="Shared"
+                    android:textColor="#000000" />
+
+            </LinearLayout>
+
         </LinearLayout>
 
-            <!--End-->
-
-    <!--Write-->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical">
-
-        <!-- Upload Content EditText Area -->
-        <EditText
-            android:id="@+id/uploadContent"
-            android:layout_width="match_parent"
-            android:layout_height="350dp"
-            android:ems="10"
-            android:inputType="textMultiLine"
-            android:lines="8"
-            android:minLines="6"
-            android:maxLines="10" />
-        <!--End-->
-
-        <!--보류-->
-        <!--Send Button-->
-        <Button
-            android:id="@+id/submitBtn"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:text="Submit"/>
-        <!--End-->
-
     </LinearLayout>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="250dp"
-        android:id="@+id/textView_main_result" />
 
 </LinearLayout>
