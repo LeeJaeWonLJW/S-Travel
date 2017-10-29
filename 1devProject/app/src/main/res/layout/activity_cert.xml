@@ -13,6 +13,15 @@
         card_view:cardPreventCornerOverlap="false"
         card_view:cardUseCompatPadding="true">
 
+        <TextView
+            android:visibility="invisible"
+            android:id="@+id/uploadID"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:padding="5dp" />
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
@@ -34,7 +43,7 @@
 
                     <!--프로필이미지-->
                     <ImageView
-                        android:id="@+id/imageView"
+                        android:id="@+id/userProfileIMG"
                         android:layout_width="40dp"
                         android:layout_height="40dp"
                         android:layout_centerVertical="true"
@@ -51,7 +60,7 @@
 
                         <!--닉네임-->
                         <TextView
-                            android:id="@+id/tv_title"
+                            android:id="@+id/userName"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="Janico"
@@ -61,7 +70,7 @@
 
                         <!--시간-->
                         <TextView
-                            android:id="@+id/tv_date"
+                            android:id="@+id/uploadDate"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="2017-10-01 13:59"
@@ -94,6 +103,7 @@
                     android:weightSum="1">
 
                     <TextView
+                        android:id="@+id/uploadContent"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="5dp"
@@ -102,7 +112,7 @@
                         android:text="Text" />
 
                     <ImageView
-                        android:id="@+id/iv_image"
+                        android:id="@+id/uploadIMG"
                         android:layout_width="326dp"
                         android:layout_height="wrap_content"
                         android:layout_marginBottom="5dp"

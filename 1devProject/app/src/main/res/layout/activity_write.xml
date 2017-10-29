@@ -5,99 +5,65 @@
     android:layout_height="match_parent">
 
     <!-- Title Bar -->
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:background="#29bb9c">
 
         <ImageButton
-            android:id="@+id/imgbtn_menu"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
-            android:layout_gravity="center"
-            android:layout_marginLeft="8dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
             android:background="@drawable/menu_icon"/>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_gravity="center"
-            android:text="S-Travel"
-            android:textStyle="normal"
-            android:typeface="sans"
-            android:textColor="#FFFF"
-            android:textSize="9pt" />
+        <ImageView
+            android:layout_width="130dp"
+            android:layout_height="35dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/title"/>
 
-    </LinearLayout>
+        <ImageButton
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/userinfo"/>
+    </RelativeLayout>
 
     <!--Write-->
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <!--게시자 정보-->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="1dp"
-            android:layout_marginLeft="8dp"
-            android:background="#fff"
-            android:orientation="horizontal">
-
-            <!--프로필이미지-->
-            <ImageView
-                android:id="@+id/imageView"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:layout_marginRight="5dp"
-                android:layout_centerVertical="true"
-                android:src="@drawable/coex" />
-
-            <!--닉네임-->
-            <TextView
-                android:id="@+id/tv_title"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Janico"
-                android:textAppearance="?android:attr/textAppearanceMedium"
-                android:textColor="#000000"
-                android:textSize="30dp" />
-        </LinearLayout>
-        <!--End-->
-
-        <!--글 입력창
-        <LinearLayout
+        <!-- Upload Content EditText Area -->
+        <EditText
+            android:id="@+id/uploadContent"
             android:layout_width="match_parent"
             android:layout_height="350dp"
-            android:layout_margin="5dp">
-
-            <EditText
-                android:id="@+id/editText"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:ems="10"
-                android:inputType="textMultiLine"
-                android:lines="8"
-                android:minLines="6"
-                android:maxLines="10" />
-
-        </LinearLayout>
-        -->
+            android:ems="10"
+            android:inputType="textMultiLine"
+            android:lines="8"
+            android:minLines="6"
+            android:maxLines="10" />
         <!--End-->
 
         <!--보류-->
-        <!--게시글 설정 -->
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal">
-
-            <!--Facebook Example Tag-->
-        </LinearLayout>
+        <!--Send Button-->
+        <Button
+            android:id="@+id/submitBtn"
+            android:layout_width="100dp"
+            android:layout_height="20dp"
+            android:text="Submit"/>
         <!--End-->
 
     </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:id="@+id/textView_main_result" />
+
 </LinearLayout>
