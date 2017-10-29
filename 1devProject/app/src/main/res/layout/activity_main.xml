@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+
+! 메인 화면
+! 글쓰기 버튼을 만들어서 activity_write 로 이동해주세요
+
+-->
 <ScrollView   xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"

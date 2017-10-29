@@ -16,41 +16,35 @@ import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
-import java.text.SimpleDateFormat;
 
-    /* 참고 사항
-    userNumber          회원 식별 번호
-    userProfileIMG      회원 프로필 사진
-    userName            회원 닉네임
-    uploadID            게시글 식별 번호
-    uploadCommentNum    게시글 댓글 수
-    uploadContent       게시글 내용
-    uploadDate          게시 날짜
-    uploadIMG           업로드 사진
-    uploadLike          좋아요
-    */
+/**
+ *  이 곳은 글쓰기 Activity
+ *  DataBase로 전송함.
+ *  UserData를 받아와서 String 으로 변수값 선언 해주세여
+ **/
+
 
 public class WriteActivity extends AppCompatActivity {
 
     private static String TAG = "phptest_MainActivity";
 
     private EditText muploadContent;
-    private EditText muploadIMG;
-    String userNumber = "";
-    String userProfileIMG = "";
-    String userName = "";
-    String uploadCommentNum = "0";
-    String uploadLike="0";
     private TextView mTextViewResult;
+    private EditText muserName;
 
+    String userNumber = "0";
+    String userProfileIMG = "0";
+    String uploadCommentNum = "0";
+    String uploadIMG = "0";
+    String uploadLike =  "0";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-
+        setContentView(R.layout.activity_write);
 
         muploadContent = (EditText)findViewById(R.id.uploadContent);
+        //muserName = // userName 정보를 받아와 주세요
         mTextViewResult = (TextView)findViewById(R.id.textView_main_result);
 
         Button buttonInsert = (Button)findViewById(R.id.submitBtn);
@@ -58,13 +52,14 @@ public class WriteActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                String content = muploadContent.getText().toString();
+                String uploadContent = muploadContent.getText().toString();
+                String userName = muserName.getText().toString();
 
                 InsertData task = new InsertData();
-                task.execute(content);
-
+                task.execute(uploadContent,userName);
 
                 muploadContent.setText("");
+                muserName.setText("");
 
             }
         });
@@ -78,7 +73,7 @@ public class WriteActivity extends AppCompatActivity {
         protected void onPreExecute() {
             super.onPreExecute();
 
-            progressDialog = ProgressDialog.show(MainActivity.this,
+            progressDialog = ProgressDialog.show(WriteActivity.this,
                     "Please Wait", null, true, true);
         }
 
@@ -96,12 +91,11 @@ public class WriteActivity extends AppCompatActivity {
         @Override
         protected String doInBackground(String... params) {
 
-            String name = (String)params[0];
-            String address = (String)params[1];
+            String uploadContent = (String)params[0];
+            String userName = (String)params[1];
 
-            String serverURL = "https:/tshlab.com/doc/insert.php";
-            String postParameters = "name=" + name + "&address=" + address;
-
+            String serverURL = "https://tshlab.com/doc/insert";
+            String postParameters = "userNumber=" + userNumber +  "&userProfileIMG=" + userProfileIMG + "&userName=" + userName + "&uploadCommentNum=" + uploadCommentNum + "&uploadContent=" + uploadContent + "&uploadIMG=" + uploadIMG + "&uploadLike=" + uploadLike ;
 
             try {
 

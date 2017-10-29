@@ -1,4 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+
+! 이곳은 write 페이지
+! uploadContent 가 본문 내용 이고
+! 이미지 업로드는 구현하지 못했음.
+
+-->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical"
     android:layout_width="match_parent"
@@ -32,89 +39,6 @@
             android:background="@drawable/userinfo"/>
     </RelativeLayout>
 
-    <!-- USER DATA -->
-    <TextView
-        android:visibility="invisible"
-        android:id="@+id/uploadID"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
-        android:layout_margin="5dp"
-        android:padding="5dp" />
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_margin="3dp"
-        android:background="#Ffffff"
-        android:orientation="vertical">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_marginBottom="1dp"
-                android:layout_marginLeft="5dp"
-                android:background="#fff">
-
-                <!--프로필이미지-->
-                <ImageView
-                    android:id="@+id/userProfileIMG"
-                    android:layout_width="40dp"
-                    android:layout_height="40dp"
-                    android:layout_centerVertical="true"
-                    android:src="@drawable/coex" />
-
-                <!--글 정보 출력-->
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerVertical="true"
-                    android:layout_toLeftOf="@+id/imageView2"
-                    android:layout_toRightOf="@+id/imageView"
-                    android:orientation="vertical">
-
-                    <!--닉네임-->
-                    <TextView
-                        android:id="@+id/userName"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Janico"
-                        android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:textColor="#000000"
-                        android:textSize="16dp" />
-
-                    <!--시간-->
-                    <TextView
-                        android:id="@+id/uploadDate"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="2017-10-01 13:59"
-                        android:textAppearance="?android:attr/textAppearanceSmall"
-                        android:textColor="#000000"
-                        android:textSize="13dp" />
-                </LinearLayout>
-
-                <!--글 설정-->
-                <ImageView
-                    android:id="@+id/imageView2"
-                    android:layout_width="15dp"
-                    android:layout_height="18dp"
-                    android:layout_alignParentRight="true"
-                    android:layout_centerVertical="true"
-                    android:layout_marginLeft="220dp"
-                    android:src="@drawable/arrow" />
-
-            </LinearLayout>
-
-        </LinearLayout>
-
-            <!--End-->
-
     <!--Write-->
     <LinearLayout
         android:layout_width="match_parent"
@@ -134,19 +58,15 @@
         <!--End-->
 
         <!--보류-->
+
         <!--Send Button-->
         <Button
             android:id="@+id/submitBtn"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:text="Submit"/>
+            android:text="submitBtn"/>
         <!--End-->
 
     </LinearLayout>
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="250dp"
-        android:id="@+id/textView_main_result" />
 
 </LinearLayout>
