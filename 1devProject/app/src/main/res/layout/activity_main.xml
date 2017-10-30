@@ -1,4 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!--
+
+! 메인 화면
+! 글쓰기 버튼을 만들어서 activity_write 로 이동해주세요
+
+-->
 <ScrollView   xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -6,70 +12,89 @@
     android:layout_height="match_parent"
     android:background="#FFFFFF">
 
-    <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
 
-        <!-- Title -->
         <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-            <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:background="#29bb9c">
-
-            <ImageButton
-                android:id="@+id/imgbtn_menu"
-                android:layout_width="20dp"
-                android:layout_height="20dp"
-                android:layout_gravity="center"
-                android:layout_marginLeft="8dp"
-                android:background="@drawable/menu_icon"/>
-
-            <TextView
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="10dp"
-                android:layout_gravity="center"
-                android:text="S-Travel"
-                android:textStyle="normal"
-                android:typeface="sans"
-                android:textColor="#FFFF"
-                android:textSize="9pt" />
+                android:orientation="vertical">
 
-        </LinearLayout>
+                <!-- Title -->
+                <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
 
-         </LinearLayout>
+                    <!--Titlebar-->
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:background="#29bb9c">
 
-        <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="281dp"
-        android:orientation="vertical">
+                        <ImageButton
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:background="@drawable/menu_icon"/>
 
-            <!-- Main Document View -->
+                        <ImageView
+                            android:layout_width="130dp"
+                            android:layout_height="35dp"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/title"/>
 
-            <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+                        <ImageButton
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/userinfo"/>
+                    </RelativeLayout>
 
-                <android.support.v7.widget.RecyclerView
-                    android:id="@+id/recyclerview"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
+                 </LinearLayout>
+
+                <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="520dp"
+                android:orientation="vertical">
+
+                    <!-- Main Document View -->
+
+                    <ListView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="10"
+                        android:padding="5dp"
+                        android:id="@+id/listView_main_list" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="0"
+                        android:layout_margin="5dp"
+                        android:padding="5dp"
+                        android:id="@+id/textView_main_result" />
+
+                    <!-- End -->
+
+                </LinearLayout>
+
+                <!--Floating 메뉴-->
+
             </LinearLayout>
 
-            <!-- End -->
+            <!-- 글쓰기 버튼 -->
+            <ImageButton
+                android:id="@+id/writeBtn"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/write_btn"
+                android:layout_marginTop="540dp"
+                android:layout_marginLeft="340dp"
+                android:scaleType="MATRIX" />
+    </RelativeLayout>
 
-        </LinearLayout>
-
-        <!--Floating 메뉴-->
-
-    </LinearLayout>
 </ScrollView>

@@ -1,11 +1,24 @@
 package org.androidtown.janicoproject;
+import android.app.Activity;
 import android.os.Bundle;
-import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageButton;
 
-public class CompleteActivity extends AppCompatActivity{
+public class CompleteActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_certification);
+        setContentView(R.layout.activity_complete);
+        Button close = (Button) findViewById(R.id.close);
+
+        //닫기버튼 구현
+        close.setOnClickListener(
+                new ImageButton.OnClickListener() {
+                    public void onClick(View v) {
+                        finish();
+                    }
+                }
+        );
     }
 }

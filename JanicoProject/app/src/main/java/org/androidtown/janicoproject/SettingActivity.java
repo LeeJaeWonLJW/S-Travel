@@ -43,7 +43,7 @@ public class SettingActivity extends AppCompatActivity {
                 new Button.OnClickListener() {
                     public void onClick(View v) {
                         Intent intent = new Intent(SettingActivity.this, CertificationActivity.class);
-                        intent.putExtra("course", 0);
+                        intent.putExtra("course", 1);
                         result.setText(dbhelper.getResult());
                         startActivity(intent);
                     }
