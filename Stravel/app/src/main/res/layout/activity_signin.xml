@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+<ScrollView android:layout_width="match_parent"
+            android:layout_height="match_parent"
+    android:background="#ffffff">
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:paddingTop="100dp"
+    android:layout_gravity="center">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/xml_border"
+        android:layout_marginTop="25dp"
+        android:layout_marginLeft="30dp"
+        android:paddingRight="25dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp">
+
+        <!--
+            아이디 : id
+            아이디입력 : idinput
+            비밀번호 : password
+            비밀번호입력 : passwordinput
+            비밀번호확인 : passwordcheck
+            비밀번호확인입력옆텍스트 : passwordcheckmessage
+            비밀번호확인입력 : passwordcheckinput
+            닉네임 : nickname
+            닉네임입력 : nicknameinput
+            확인 : confirm
+        -->
+
+        <!--회원정보-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginBottom="30dp"
+            android:layout_marginLeft="20dp"
+            android:text="회원정보 입력"
+            android:textSize="25dp"
+            android:textStyle="bold"
+            android:textColor="#000000"/>
+
+        <!--아이디-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="20dp"
+            android:text="아이디(10자 이하)"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:id="@+id/id"
+            android:textColor="#000000"/>
+
+        <!--아이디입력-->
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:paddingLeft="20dp"
+            android:background="@drawable/xml_border"
+            android:hint="아이디 입력"
+            android:textSize="20dp"
+            android:id="@+id/idinput"
+            android:textColorHint="#9b9b9b"
+            android:textColor="#000000"/>
+
+        <!--아이디중복확인-->
+        <Button
+            android:layout_width="300dp"
+            android:layout_height="45dp"
+            android:text="아이디 중복확인"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:background="#29bb9c"
+            android:textColor="#ffffff"
+            android:id="@+id/idcheck"
+            android:textStyle="bold"
+            android:textSize="15dp"/>
+
+        <!--비밀번호-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="20dp"
+            android:text="비밀번호(10자 이하)"
+            android:textSize="20dp"
+            android:id="@+id/password"
+            android:textStyle="bold"
+            android:textColor="#000000" />
+
+        <!--비밀번호입력-->
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:paddingLeft="20dp"
+            android:background="@drawable/xml_border"
+            android:hint="비밀번호 입력"
+            android:textSize="20dp"
+            android:id="@+id/passwordinput"
+            android:textColorHint="#9b9b9b"
+            android:textColor="#000000"
+            android:inputType="textPassword"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <!--비밀번호확인-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="20dp"
+                android:text="비밀번호 확인"
+                android:id="@+id/passwordcheck"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textColor="#000000"/>
+
+            <!--확인메세지-->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="20dp"
+                android:text="비밀번호가 틀립니다"
+                android:id="@+id/passwordcheckmessage"
+                android:textSize="15dp"
+                android:textColor="#ff2626"/>
+
+        </LinearLayout>
+
+        <!--비밀번호확인입력-->
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:paddingLeft="20dp"
+            android:background="@drawable/xml_border"
+            android:hint="비밀번호 재입력"
+            android:id="@+id/passwordcheckinput"
+            android:textSize="20dp"
+            android:textColorHint="#9b9b9b"
+            android:textColor="#000000"
+            android:inputType="textPassword"/>
+
+        <!--닉네임-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="20dp"
+            android:text="닉네임"
+            android:textSize="20dp"
+            android:id="@+id/nickname"
+            android:textStyle="bold"
+            android:textColor="#000000"/>
+
+        <!--닉네임입력-->
+        <EditText
+            android:layout_width="300dp"
+            android:layout_height="45dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="20dp"
+            android:paddingLeft="20dp"
+            android:background="@drawable/xml_border"
+            android:id="@+id/nicknameinput"
+            android:hint="닉네임 입력"
+            android:textSize="20dp"
+            android:textColorHint="#9b9b9b"
+            android:textColor="#000000"/>
+
+    </LinearLayout>
+
+    <!--확인버튼-->
+    <Button
+        android:layout_width="100dp"
+        android:layout_height="45dp"
+        android:text="다음"
+        android:layout_marginLeft="270dp"
+        android:layout_marginTop="20dp"
+        android:background="#29bb9c"
+        android:textColor="#ffffff"
+        android:id="@+id/confirm"
+        android:textStyle="bold"
+        android:textSize="15dp"
+        android:onClick="GETSIGNIN"/>
+
+</LinearLayout>
+
+</ScrollView>
+
+    <!--타이틀바-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="#29bb9c"
+        android:layout_alignParentTop="true">
+
+        <ImageButton
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/menu"
+            android:background="@drawable/menu_icon"
+            android:onClick="ToLogin1"/>
+
+        <ImageView
+            android:layout_width="130dp"
+            android:layout_height="35dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/title"/>
+
+        <ImageButton
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:id="@+id/rightmenu"
+            android:background="@drawable/userinfo"
+            android:onClick="ToLogin2"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>
